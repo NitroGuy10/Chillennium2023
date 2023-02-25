@@ -5,6 +5,8 @@ extends Node2D
 # var a = 2
 # var b = "text"
 
+export var isPlayer2 = false
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

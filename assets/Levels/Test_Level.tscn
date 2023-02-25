@@ -1,106 +1,23 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/Objects/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Objects/PushableWord.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/SoundEffects/piano_b.mp3" type="AudioStream" id=3]
 [ext_resource path="res://assets/Objects/WordPlatformInteractable.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/SoundEffects/piano_e.mp3" type="AudioStream" id=5]
-[ext_resource path="res://assets/SoundEffects/piano_c.mp3" type="AudioStream" id=6]
 
 [node name="Test_Level" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 575, 538 )
+position = Vector2( 712, 639 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Player2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 79, 78 )
+position = Vector2( 242, 67 )
 scale = Vector2( 0.5, 0.5 )
 isPlayer2 = true
 
-[node name="WordPlatformInteractable" parent="." instance=ExtResource( 4 )]
-position = Vector2( 59, 326 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="RichTextLabel" parent="WordPlatformInteractable/WordPlatformText" index="0"]
-text = "I"
-
-[node name="CollisionStuff" parent="WordPlatformInteractable" index="1"]
-scale = Vector2( 0.17, 1 )
-
-[node name="Area2D" parent="WordPlatformInteractable/CollisionStuff" index="0"]
-playSound = true
-
-[node name="WordPlatformInteractable2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 146, 326 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="RichTextLabel" parent="WordPlatformInteractable2/WordPlatformText" index="0"]
-text = "am"
-
-[node name="VScrollBar2" type="VScrollBar" parent="WordPlatformInteractable2/WordPlatformText/RichTextLabel" index="0"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-max_value = 150.0
-step = 1.0
-page = 163.0
-
-[node name="VScrollBar3" type="VScrollBar" parent="WordPlatformInteractable2/WordPlatformText/RichTextLabel" index="1"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-step = 1.0
-
-[node name="CollisionStuff" parent="WordPlatformInteractable2" index="1"]
-position = Vector2( 0.186, 0 )
-scale = Vector2( 0.409999, 1 )
-
-[node name="Area2D" parent="WordPlatformInteractable2/CollisionStuff" index="0"]
-playSound = true
-
-[node name="AudioStreamPlayer" parent="WordPlatformInteractable2" index="2"]
-stream = ExtResource( 5 )
-
-[node name="WordPlatformInteractable3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 319, 326 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="RichTextLabel" parent="WordPlatformInteractable3/WordPlatformText" index="0"]
-text = "so"
-
-[node name="VScrollBar2" type="VScrollBar" parent="WordPlatformInteractable3/WordPlatformText/RichTextLabel" index="0"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-max_value = 150.0
-step = 1.0
-page = 163.0
-
-[node name="VScrollBar3" type="VScrollBar" parent="WordPlatformInteractable3/WordPlatformText/RichTextLabel" index="1"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-step = 1.0
-
-[node name="CollisionStuff" parent="WordPlatformInteractable3" index="1"]
-position = Vector2( 0.186, 0 )
-scale = Vector2( 0.41, 1 )
-
-[node name="Area2D" parent="WordPlatformInteractable3/CollisionStuff" index="0"]
-playSound = true
-
-[node name="AudioStreamPlayer" parent="WordPlatformInteractable3" index="2"]
-stream = ExtResource( 6 )
-
 [node name="WordPlatformInteractable4" parent="." instance=ExtResource( 4 )]
-position = Vector2( 619, 326 )
+position = Vector2( 756, 427 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -112,6 +29,9 @@ text = "happy!"
 [node name="CollisionStuff" parent="WordPlatformInteractable4" index="1"]
 position = Vector2( 0.186, 0 )
 scale = Vector2( 1.21, 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Area2D" parent="WordPlatformInteractable4/CollisionStuff" index="0"]
 scale = Vector2( 0.808999, 0.808999 )
@@ -140,44 +60,19 @@ scale = Vector2( 0.64185, 1 )
 custom_colors/default_color = Color( 0.0588235, 0.564706, 1, 1 )
 text = "sad"
 
-[node name="WordPlatformInteractable5" parent="." instance=ExtResource( 4 )]
-position = Vector2( 141, 681 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="WordPlatformInteractable" parent="." instance=ExtResource( 4 )]
+position = Vector2( 47, 267 )
+textString = "I"
 
-[node name="RichTextLabel" parent="WordPlatformInteractable5/WordPlatformText" index="0"]
-margin_right = 1198.0
-margin_bottom = 160.0
-text = "wowowowowowow"
+[node name="WordPlatformInteractable2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 191, 206 )
+textString = "am"
 
-[node name="VScrollBar2" type="VScrollBar" parent="WordPlatformInteractable5/WordPlatformText/RichTextLabel" index="0"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-max_value = 150.0
-step = 1.0
-page = 163.0
+[node name="WordPlatformInteractable3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 586, 161 )
+textString = "so"
 
-[node name="VScrollBar3" type="VScrollBar" parent="WordPlatformInteractable5/WordPlatformText/RichTextLabel" index="1"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-step = 1.0
-
-[node name="CollisionStuff" parent="WordPlatformInteractable5" index="1"]
-position = Vector2( 0.186, 0 )
-scale = Vector2( 2.65, 1 )
-
-[editable path="WordPlatformInteractable"]
-[editable path="WordPlatformInteractable/WordPlatformText"]
-[editable path="WordPlatformInteractable2"]
-[editable path="WordPlatformInteractable2/WordPlatformText"]
-[editable path="WordPlatformInteractable3"]
-[editable path="WordPlatformInteractable3/WordPlatformText"]
 [editable path="WordPlatformInteractable4"]
 [editable path="WordPlatformInteractable4/WordPlatformText"]
 [editable path="PushableWord"]
 [editable path="PushableWord/RigidBody2D/WordPlatformText"]
-[editable path="WordPlatformInteractable5"]
-[editable path="WordPlatformInteractable5/WordPlatformText"]

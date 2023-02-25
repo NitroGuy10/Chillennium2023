@@ -14,3 +14,5 @@ position = Vector2( 185.5, 44.5 )
 shape = SubResource( 1 )
 
 [node name="WordPlatformText" parent="." instance=ExtResource( 2 )]
+
+[editable path="WordPlatformText"]

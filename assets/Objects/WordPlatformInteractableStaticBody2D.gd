@@ -5,7 +5,6 @@ extends Area2D
 # var a = 2
 # var b = "text"
 
-export var pressedColor = Color(1.0, 1.0, 1.0)
 
 var pressed = false
 var text

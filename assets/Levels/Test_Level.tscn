@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/Objects/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/Objects/PushableWord.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/Objects/WordPlatformInteractable.tscn" type="PackedScene" id=4]
 
 [node name="Test_Level" type="Node2D"]
@@ -16,6 +17,9 @@ isPlayer2 = true
 
 [node name="WordPlatformInteractable" parent="." instance=ExtResource( 4 )]
 position = Vector2( 59, 326 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="RichTextLabel" parent="WordPlatformInteractable/WordPlatformText" index="0"]
 text = "I"
@@ -27,7 +31,10 @@ scale = Vector2( 0.17, 1 )
 position = Vector2( 185.5, 44.5 )
 
 [node name="WordPlatformInteractable2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 147.814, 326 )
+position = Vector2( 146, 326 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="RichTextLabel" parent="WordPlatformInteractable2/WordPlatformText" index="0"]
 text = "am"
@@ -90,7 +97,7 @@ __meta__ = {
 }
 
 [node name="RichTextLabel" parent="WordPlatformInteractable4/WordPlatformText" index="0"]
-custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/default_color = Color( 1, 0.984314, 0, 1 )
 text = "happy!"
 
 [node name="CollisionStuff" parent="WordPlatformInteractable4" index="1"]
@@ -103,6 +110,50 @@ scale = Vector2( 0.808999, 0.808999 )
 [node name="CollisionShape2D" parent="WordPlatformInteractable4/CollisionStuff/StaticBody2D" index="0"]
 position = Vector2( 185.5, 44.5 )
 
+[node name="PushableWord" parent="." instance=ExtResource( 2 )]
+position = Vector2( 473, 540 )
+scale = Vector2( 1.00516, 1 )
+
+[node name="RichTextLabel" parent="PushableWord/RigidBody2D/WordPlatformText" index="0"]
+custom_colors/default_color = Color( 0.0588235, 0.564706, 1, 1 )
+text = "sad"
+
+[node name="CollisionShape2D" parent="PushableWord/RigidBody2D" index="1"]
+position = Vector2( 107.5, 44.5 )
+scale = Vector2( 0.64185, 1 )
+
+[node name="WordPlatformInteractable5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 141, 681 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="RichTextLabel" parent="WordPlatformInteractable5/WordPlatformText" index="0"]
+margin_right = 1198.0
+margin_bottom = 160.0
+text = "wowowowowowow"
+
+[node name="VScrollBar2" type="VScrollBar" parent="WordPlatformInteractable5/WordPlatformText/RichTextLabel" index="0"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+max_value = 150.0
+step = 1.0
+page = 163.0
+
+[node name="VScrollBar3" type="VScrollBar" parent="WordPlatformInteractable5/WordPlatformText/RichTextLabel" index="1"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+step = 1.0
+
+[node name="CollisionStuff" parent="WordPlatformInteractable5" index="1"]
+position = Vector2( 0.186, 0 )
+scale = Vector2( 2.65, 1 )
+
+[node name="CollisionShape2D" parent="WordPlatformInteractable5/CollisionStuff/StaticBody2D" index="0"]
+position = Vector2( 185.5, 44.5 )
+
 [editable path="WordPlatformInteractable"]
 [editable path="WordPlatformInteractable/WordPlatformText"]
 [editable path="WordPlatformInteractable2"]
@@ -111,3 +162,7 @@ position = Vector2( 185.5, 44.5 )
 [editable path="WordPlatformInteractable3/WordPlatformText"]
 [editable path="WordPlatformInteractable4"]
 [editable path="WordPlatformInteractable4/WordPlatformText"]
+[editable path="PushableWord"]
+[editable path="PushableWord/RigidBody2D/WordPlatformText"]
+[editable path="WordPlatformInteractable5"]
+[editable path="WordPlatformInteractable5/WordPlatformText"]

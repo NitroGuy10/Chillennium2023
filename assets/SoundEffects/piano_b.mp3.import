@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/piano_b.mp3-72d12d5fc59e3062992136e7cb84637d.mp3str"
+
+[deps]
+
+source_file="res://assets/SoundEffects/piano_b.mp3"
+dest_files=[ "res://.import/piano_b.mp3-72d12d5fc59e3062992136e7cb84637d.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

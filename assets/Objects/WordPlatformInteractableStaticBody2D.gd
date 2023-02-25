@@ -7,6 +7,7 @@ extends Area2D
 
 export var impartEmotion = false
 export var emotion = "happy"
+export var playSound = false
 
 var pressed = false
 var text
@@ -25,10 +26,17 @@ func _process(delta):
 		text.position.y = lerp(text.position.y, -10, 0.2)
 
 func _physics_process(delta):
+	var previous_pressed_status = pressed
 	pressed = false
 	for body in get_overlapping_bodies():
 		if "Player" in body.name:
+			if previous_pressed_status == false:
+				if impartEmotion:
+					body.currentEmotion = emotion
+				if playSound:
+					get_parent().get_parent().get_node("AudioStreamPlayer").play(false)	
+					get_parent().get_parent().get_node("AudioStreamPlayer")
+					
+					
 			pressed = true
-			if impartEmotion:
-				body.currentEmotion = emotion
 	

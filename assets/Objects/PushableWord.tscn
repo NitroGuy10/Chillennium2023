@@ -9,11 +9,11 @@ extents = Vector2( 173.5, 44.75 )
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 mode = 2
-mass = 66.52
+mass = 0.00102041
 gravity_scale = 42.92
-
-[node name="WordPlatformText" parent="RigidBody2D" instance=ExtResource( 1 )]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 position = Vector2( 173.5, 44.5 )
 shape = SubResource( 1 )
+
+[node name="WordPlatformText" parent="RigidBody2D" instance=ExtResource( 1 )]

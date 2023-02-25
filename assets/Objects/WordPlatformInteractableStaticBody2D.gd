@@ -5,6 +5,8 @@ extends Area2D
 # var a = 2
 # var b = "text"
 
+export var impartEmotion = false
+export var emotion = "happy"
 
 var pressed = false
 var text
@@ -27,4 +29,6 @@ func _physics_process(delta):
 	for body in get_overlapping_bodies():
 		if "Player" in body.name:
 			pressed = true
+			if impartEmotion:
+				body.currentEmotion = emotion
 	

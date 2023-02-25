@@ -7,11 +7,11 @@
 [node name="Test_Level" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 946, 218 )
+position = Vector2( 412, 78 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Player2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 381, 168 )
+position = Vector2( 224, 92 )
 scale = Vector2( 0.5, 0.5 )
 isPlayer2 = true
 
@@ -26,9 +26,6 @@ text = "I"
 
 [node name="CollisionStuff" parent="WordPlatformInteractable" index="1"]
 scale = Vector2( 0.17, 1 )
-
-[node name="CollisionShape2D" parent="WordPlatformInteractable/CollisionStuff/StaticBody2D" index="0"]
-position = Vector2( 185.5, 44.5 )
 
 [node name="WordPlatformInteractable2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 146, 326 )
@@ -57,9 +54,6 @@ step = 1.0
 position = Vector2( 0.186, 0 )
 scale = Vector2( 0.409999, 1 )
 
-[node name="CollisionShape2D" parent="WordPlatformInteractable2/CollisionStuff/StaticBody2D" index="0"]
-position = Vector2( 185.5, 44.5 )
-
 [node name="WordPlatformInteractable3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 319, 326 )
 __meta__ = {
@@ -87,9 +81,6 @@ step = 1.0
 position = Vector2( 0.186, 0 )
 scale = Vector2( 0.41, 1 )
 
-[node name="CollisionShape2D" parent="WordPlatformInteractable3/CollisionStuff/StaticBody2D" index="0"]
-position = Vector2( 185.5, 44.5 )
-
 [node name="WordPlatformInteractable4" parent="." instance=ExtResource( 4 )]
 position = Vector2( 619, 326 )
 __meta__ = {
@@ -106,21 +97,26 @@ scale = Vector2( 1.21, 1 )
 
 [node name="Area2D" parent="WordPlatformInteractable4/CollisionStuff" index="0"]
 scale = Vector2( 0.808999, 0.808999 )
+impartEmotion = true
 
-[node name="CollisionShape2D" parent="WordPlatformInteractable4/CollisionStuff/StaticBody2D" index="0"]
-position = Vector2( 185.5, 44.5 )
+[node name="CollisionShape2D" parent="WordPlatformInteractable4/CollisionStuff/Area2D" index="0"]
+position = Vector2( 231.706, 34.6107 )
+scale = Vector2( 1.21815, 1 )
 
 [node name="PushableWord" parent="." instance=ExtResource( 2 )]
-position = Vector2( 473, 540 )
+position = Vector2( 793, 571 )
 scale = Vector2( 1.00516, 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" parent="PushableWord/RigidBody2D" index="0"]
+position = Vector2( 107.5, 44.5 )
+scale = Vector2( 0.64185, 1 )
 
 [node name="RichTextLabel" parent="PushableWord/RigidBody2D/WordPlatformText" index="0"]
 custom_colors/default_color = Color( 0.0588235, 0.564706, 1, 1 )
 text = "sad"
-
-[node name="CollisionShape2D" parent="PushableWord/RigidBody2D" index="1"]
-position = Vector2( 107.5, 44.5 )
-scale = Vector2( 0.64185, 1 )
 
 [node name="WordPlatformInteractable5" parent="." instance=ExtResource( 4 )]
 position = Vector2( 141, 681 )
@@ -150,9 +146,6 @@ step = 1.0
 [node name="CollisionStuff" parent="WordPlatformInteractable5" index="1"]
 position = Vector2( 0.186, 0 )
 scale = Vector2( 2.65, 1 )
-
-[node name="CollisionShape2D" parent="WordPlatformInteractable5/CollisionStuff/StaticBody2D" index="0"]
-position = Vector2( 185.5, 44.5 )
 
 [editable path="WordPlatformInteractable"]
 [editable path="WordPlatformInteractable/WordPlatformText"]

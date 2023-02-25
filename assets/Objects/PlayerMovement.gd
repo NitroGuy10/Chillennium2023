@@ -7,9 +7,12 @@ extends KinematicBody2D
 var isPlayer2 = false
 
 var jumpvelocity = 800.0
+var happyJumpVelocity = 1200.0
 var walkspeed = 100.0
 var horizontal_damping = 0.8
 var gravityscale = 1600.0
+
+var currentEmotion = "none"
 
 var velocity = Vector2()
 
@@ -21,8 +24,12 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	if currentEmotion == "happy":
+		$CPUParticles2D.emitting = true
+	else:
+		$CPUParticles2D.emitting = false
+		
 
 func is_pressed_for_me(key_name: String):
 	if isPlayer2:
@@ -41,7 +48,10 @@ func _physics_process(delta):
 	
 	if is_on_floor():
 		if is_pressed_for_me("ui_up"):
-			velocity.y = -jumpvelocity
+			if currentEmotion == "happy":
+				velocity.y = -happyJumpVelocity
+			else:
+				velocity.y = -jumpvelocity				
 		else:
 			velocity.y = 0
 	else:

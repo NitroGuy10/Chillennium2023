@@ -22,8 +22,9 @@ func _ready():
 	var richTextLabel = get_parent().get_parent().get_node("WordPlatformText/RichTextLabel")
 	richTextLabel.text = get_parent().get_parent().textString
 	textBounds = richTextLabel.get_font("normal_font").get_string_size(richTextLabel.text) / 2
-	$CollisionShape2D.shape.extents = textBounds  # Both collisionboxes use the same shape, so we only gotta change the shape once
+	$CollisionShape2D.scale = textBounds
 	$CollisionShape2D.position = Vector2(textBounds.x, textBounds.y - 10)
+	get_parent().get_node("StaticBody2D/CollisionShape2D").scale = textBounds
 	get_parent().get_node("StaticBody2D/CollisionShape2D").position = textBounds
 	
 

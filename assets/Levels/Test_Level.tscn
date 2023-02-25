@@ -9,16 +9,16 @@
 [node name="Test_Level" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 712, 639 )
+position = Vector2( 217, 334 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Player2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 242, 67 )
+position = Vector2( 190, 44 )
 scale = Vector2( 0.5, 0.5 )
 isPlayer2 = true
 
 [node name="WordPlatformInteractable4" parent="." instance=ExtResource( 4 )]
-position = Vector2( 756, 427 )
+position = Vector2( 982, 269 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -85,8 +85,19 @@ position = Vector2( 25, 577 )
 textString = "good"
 
 [node name="WordPlatformInteractable6" parent="." instance=ExtResource( 4 )]
-position = Vector2( 274, 577 )
+position = Vector2( 374, 577 )
 textString = "morning!"
+
+[node name="WordPlatformInteractable7" parent="." instance=ExtResource( 4 )]
+position = Vector2( 913, 586 )
+textString = "hooray!"
+
+[node name="RichTextLabel" parent="WordPlatformInteractable7/WordPlatformText" index="0"]
+custom_colors/default_color = Color( 0.803922, 0, 1, 1 )
+
+[node name="Area2D" parent="WordPlatformInteractable7/CollisionStuff" index="0"]
+impartEmotion = true
+emotion = "excited"
 
 [editable path="WordPlatformInteractable4"]
 [editable path="WordPlatformInteractable4/WordPlatformText"]
@@ -95,3 +106,5 @@ textString = "morning!"
 [editable path="WordPlatformBreak"]
 [editable path="WordPlatformBreak/WordPlatformInteractable"]
 [editable path="WordPlatformBreak/WordPlatformInteractable/WordPlatformText"]
+[editable path="WordPlatformInteractable7"]
+[editable path="WordPlatformInteractable7/WordPlatformText"]

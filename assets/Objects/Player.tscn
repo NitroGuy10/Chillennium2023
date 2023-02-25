@@ -19,11 +19,11 @@ extents = Vector2( 100, 100 )
 scale = Vector2( 0.25, 0.25 )
 script = ExtResource( 3 )
 
-[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+[node name="PlayerKinematicBody2D" type="KinematicBody2D" parent="."]
 script = ExtResource( 2 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="PlayerKinematicBody2D"]
 frames = SubResource( 1 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerKinematicBody2D"]
 shape = SubResource( 2 )

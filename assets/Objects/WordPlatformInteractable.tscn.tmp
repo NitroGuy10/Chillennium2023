@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/Objects/WordPlatformInteractableStaticBody2D.gd" type="Script" id=1]
+[ext_resource path="res://assets/Objects/WordPlatformText.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/SoundEffects/piano_a.mp3" type="AudioStream" id=3]
+[ext_resource path="res://assets/Objects/WordPlatformInteractable.gd" type="Script" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1, 1 )
+
+[node name="WordPlatformInteractable" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="WordPlatformText" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0, -10 )
+
+[node name="RichTextLabel" parent="WordPlatformText" index="0"]
+text = "pltfrm"
+
+[node name="CollisionStuff" type="Node2D" parent="."]
+position = Vector2( 0, -3 )
+
+[node name="Area2D" type="Area2D" parent="CollisionStuff"]
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionStuff/Area2D"]
+shape = SubResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="CollisionStuff"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionStuff/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[editable path="WordPlatformText"]

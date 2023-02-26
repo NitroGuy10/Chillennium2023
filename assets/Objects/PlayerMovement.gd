@@ -28,12 +28,12 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if currentEmotion == "happy":
+	if currentEmotion == "happiness":
 		$HappyParticles.emitting = true
 	else:
 		$HappyParticles.emitting = false
 	
-	if currentEmotion == "excited" and canDash:
+	if currentEmotion == "fear" and canDash:
 		$DashParticles.emitting = true
 	else:
 		$DashParticles.emitting = false
@@ -61,10 +61,10 @@ func _physics_process(delta):
 	
 	
 	if is_on_floor():
-		if currentEmotion == "excited":
+		if currentEmotion == "fear":
 			canDash = true
 		if is_pressed_for_me("ui_up"):
-			if currentEmotion == "happy":
+			if currentEmotion == "happiness":
 				velocity.y = -happyJumpVelocity
 			else:
 				velocity.y = -jumpvelocity
@@ -78,7 +78,7 @@ func _physics_process(delta):
 				velocity.y = -dashvelocity
 			elif is_pressed_for_me("ui_down"):
 				velocity.y = dashvelocity
-			elif is_pressed_for_me("ui_left"):
+			if is_pressed_for_me("ui_left"):
 				velocity.x = -dashvelocity * dashHorizScalar
 			elif is_pressed_for_me("ui_right"):
 				velocity.x = dashvelocity * dashHorizScalar

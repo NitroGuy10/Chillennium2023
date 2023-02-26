@@ -5,26 +5,31 @@ extends Area2D
 # var a = 2
 # var b = "text"
 
-var impartEmotion = false
-var emotion = "happy"
+
+
 var playSound = false
 var textColor = Color(1, 1, 1)
+var TEXT_COLORS = {
+	"none": Color(1, 1, 1),	
+	"happiness": Color(1, 1, 0),
+	"fear": Color(0.72, 0, 1)
+}
 
 var pressed = false
 var text
 var textBounds = Vector2(0, 0)
+var root
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var root = get_parent().get_parent()
+	root = get_parent().get_parent()
 	
-	impartEmotion = root.impartEmotion
-	emotion = root.emotion
 	playSound = root.playSound
-	textColor = root.textColor
+#	textColor = root.textColor
+	textColor = TEXT_COLORS[root.get_emotion()]
 	
-	text = get_parent().get_parent().get_node("WordPlatformText")
+	text = root.get_node("WordPlatformText")
 	
 	# Set the CollisionShape2D sizes to that of the text
 	var richTextLabel = root.get_node("WordPlatformText/RichTextLabel")
@@ -53,8 +58,8 @@ func _physics_process(delta):
 	for body in get_overlapping_bodies():
 		if "Player" in body.name:
 			if previous_pressed_status == false:
-				if impartEmotion:
-					body.currentEmotion = emotion
+				if root.enableEmotion:
+					body.currentEmotion = root.get_emotion()
 				if playSound:
 					get_parent().get_parent().get_node("AudioStreamPlayer").play(false)	
 					get_parent().get_parent().get_node("AudioStreamPlayer")

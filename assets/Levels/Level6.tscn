@@ -26,18 +26,18 @@ script = ExtResource( 5 )
 [node name="Background" parent="." instance=ExtResource( 2 )]
 position = Vector2( 640, 361 )
 frames = SubResource( 1 )
-frame = 0
+frame = 1
 
 [node name="Exit" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1153, 749.5 )
 scale = Vector2( 0.2882, 0.511897 )
 
 [node name="HeartHandoff" parent="." instance=ExtResource( 6 )]
-position = Vector2( 667, 553 )
-scale = Vector2( 0.75, 0.75 )
+position = Vector2( 665, 490 )
+scale = Vector2( 0.5, 0.5 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1221, 180 )
+position = Vector2( 1017, 109 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Player2" parent="." instance=ExtResource( 1 )]
@@ -78,18 +78,18 @@ enableEmotion = true
 impartAnger = true
 
 [node name="WordPlatformInteractable5" parent="." instance=ExtResource( 3 )]
-position = Vector2( 664, 614 )
+position = Vector2( 733, 530 )
 rotation = 0.00109646
 textString = "and fix everything"
 
 [node name="WordPlatformInteractable6" parent="." instance=ExtResource( 3 )]
-position = Vector2( 944, 427 )
+position = Vector2( 1080, 556 )
 rotation = 0.00109646
-textString = "I could just go back"
+textString = "Ah, the past."
 fallThoughInGuilt = true
 
 [node name="WordPlatformInteractable7" parent="." instance=ExtResource( 3 )]
-position = Vector2( 945, 299 )
+position = Vector2( 872, 330 )
 rotation = 0.00109646
 textString = "Sorry..."
 fallThoughInGuilt = true
@@ -109,32 +109,32 @@ enableEmotion = true
 impartGuilt = true
 
 [node name="WordPlatformInteractable20" parent="." instance=ExtResource( 3 )]
-position = Vector2( 717, 388 )
+position = Vector2( 715, 366 )
 rotation = 0.00109646
 textString = "I just wish"
 enableEmotion = true
 impartGuilt = true
 
 [node name="WordPlatformInteractable24" parent="." instance=ExtResource( 3 )]
-position = Vector2( 946, 179 )
+position = Vector2( 838, 230 )
 rotation = 0.00109646
 textString = "I know..."
 fallThoughInGuilt = true
 
 [node name="PushableWord2" parent="." instance=ExtResource( 25 )]
-position = Vector2( 518, -42 )
+position = Vector2( 510, -30 )
 textString = "How could you!"
 
 [node name="WordPlatformInteractable19" parent="." instance=ExtResource( 3 )]
-position = Vector2( 323, 525 )
-textString = "Were't those...."
+position = Vector2( 260, 516 )
+textString = "Weren't those...."
 fallThoughInGuilt = true
 
 [node name="WordPlatformInteractable21" parent="." instance=ExtResource( 3 )]
-position = Vector2( 375, 614 )
+position = Vector2( 393, 630 )
 textString = "amazing times...? "
 
 [node name="WordPlatformInteractable8" parent="." instance=ExtResource( 3 )]
-position = Vector2( 810, 673 )
+position = Vector2( 682, 657 )
 rotation = 0.00109646
 textString = "that's happened since then."

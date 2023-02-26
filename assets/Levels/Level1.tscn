@@ -12,6 +12,7 @@
 script = ExtResource( 2 )
 
 [node name="Background" parent="." instance=ExtResource( 1 )]
+frame = 0
 
 [node name="Separator" parent="." instance=ExtResource( 4 )]
 position = Vector2( 622.106, 276.328 )
@@ -47,7 +48,7 @@ enableEmotion = true
 impartPeace = true
 
 [node name="WordPlatformInteractable4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 87, 200 )
+position = Vector2( 93, 174 )
 textString = "brings back so many memories"
 
 [node name="WordPlatformInteractable5" parent="." instance=ExtResource( 3 )]
@@ -72,11 +73,11 @@ enableEmotion = true
 impartHappiness = true
 
 [node name="WordPlatformInteractable8" parent="." instance=ExtResource( 3 )]
-position = Vector2( 726, 549 )
+position = Vector2( 727, 569 )
 textString = "It's as if"
 
 [node name="WordPlatformInteractable9" parent="." instance=ExtResource( 3 )]
-position = Vector2( 847, 460 )
+position = Vector2( 841, 484 )
 textString = "we were"
 giveTutorialText = true
 tutorialText = ""

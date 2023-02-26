@@ -70,18 +70,18 @@ scale = Vector2( 0.5, 0.5 )
 isPlayer2 = true
 
 [node name="WordPlatformInteractable" parent="." instance=ExtResource( 5 )]
-position = Vector2( 9, 284 )
+position = Vector2( 9, 318 )
 textString = "We can't let those memories"
 
 [node name="WordPlatformInteractable3" parent="." instance=ExtResource( 5 )]
 position = Vector2( 477, 643 )
-textString = "us"
+textString = "us forever"
 fallThoughInGuilt = true
 enableEmotion = true
 impartDistress = true
 
 [node name="WordPlatformInteractable4" parent="." instance=ExtResource( 5 )]
-position = Vector2( 515, 439 )
+position = Vector2( 465, 426 )
 textString = "continue."
 
 [node name="WordPlatformInteractable8" parent="." instance=ExtResource( 5 )]
@@ -89,7 +89,7 @@ position = Vector2( 859, 294 )
 textString = "just makes"
 
 [node name="WordPlatformInteractable9" parent="." instance=ExtResource( 5 )]
-position = Vector2( 718, 488 )
+position = Vector2( 799, 427 )
 textString = "me so"
 
 [node name="WordPlatformInteractable10" parent="." instance=ExtResource( 5 )]
@@ -121,7 +121,7 @@ textString = "It shouldn't have"
 
 [node name="DistressPlatform" parent="." instance=ExtResource( 1 )]
 position = Vector2( 920, 581 )
-textString = "unbelievebly"
+textString = "unbelievably"
 
 [node name="Path2D" parent="DistressPlatform" index="0"]
 curve = SubResource( 1 )
@@ -148,7 +148,7 @@ enableEmotion = true
 impartAnger = true
 
 [node name="WordPlatformInteractable2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 596, 323 )
+position = Vector2( 566, 314 )
 rotation = 0.00109646
 textString = "go."
 

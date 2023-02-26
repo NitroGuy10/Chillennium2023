@@ -148,7 +148,7 @@ visible = false
 position = Vector2( 656, 370 )
 scale = Vector2( 0.7, 0.7 )
 frames = SubResource( 3 )
-frame = 22
+frame = 4
 playing = true
 
 [node name="Timer2" type="Timer" parent="."]

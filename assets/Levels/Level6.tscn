@@ -26,15 +26,14 @@ script = ExtResource( 5 )
 [node name="Background" parent="." instance=ExtResource( 2 )]
 position = Vector2( 640, 361 )
 frames = SubResource( 1 )
-frame = 1
 
 [node name="Exit" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1153, 749.5 )
 scale = Vector2( 0.2882, 0.511897 )
 
 [node name="HeartHandoff" parent="." instance=ExtResource( 6 )]
-position = Vector2( 665, 490 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 665, 401 )
+scale = Vector2( 0.25, 0.25 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 1017, 109 )
@@ -122,16 +121,16 @@ textString = "I know..."
 fallThoughInGuilt = true
 
 [node name="PushableWord2" parent="." instance=ExtResource( 25 )]
-position = Vector2( 510, -30 )
+position = Vector2( 421, 28 )
 textString = "How could you!"
 
 [node name="WordPlatformInteractable19" parent="." instance=ExtResource( 3 )]
-position = Vector2( 260, 516 )
+position = Vector2( 25, 544 )
 textString = "Weren't those...."
 fallThoughInGuilt = true
 
 [node name="WordPlatformInteractable21" parent="." instance=ExtResource( 3 )]
-position = Vector2( 393, 630 )
+position = Vector2( 359, 630 )
 textString = "amazing times...? "
 
 [node name="WordPlatformInteractable8" parent="." instance=ExtResource( 3 )]

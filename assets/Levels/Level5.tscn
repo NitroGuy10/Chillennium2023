@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://assets/Sprites/Backgrounds/level4/LEVEL_4.0-0.png" type="Texture" id=1]
 [ext_resource path="res://assets/Sprites/Backgrounds/level4/LEVEL_4.0-2.png" type="Texture" id=2]
@@ -12,8 +12,7 @@
 [ext_resource path="res://assets/Objects/Background.tscn" type="PackedScene" id=10]
 [ext_resource path="res://assets/Objects/WordPlatformInteractable.tscn" type="PackedScene" id=11]
 [ext_resource path="res://assets/Objects/Separator.tscn" type="PackedScene" id=12]
-[ext_resource path="res://assets/Objects/DistressPlatform.tscn" type="PackedScene" id=13]
-[ext_resource path="res://assets/Objects/PushableWord.tscn" type="PackedScene" id=14]
+[ext_resource path="res://assets/Objects/WordPlatformBreak.tscn" type="PackedScene" id=13]
 [ext_resource path="res://assets/Sprites/Backgrounds/level4/LEVEL_4.0-7.png" type="Texture" id=15]
 [ext_resource path="res://assets/Sprites/Backgrounds/level4/LEVEL_4.0-9.png" type="Texture" id=16]
 [ext_resource path="res://assets/Sprites/Backgrounds/level4/LEVEL_4.0-10.png" type="Texture" id=17]
@@ -34,26 +33,16 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="Curve2D" id=1]
-_data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 101.333, -19, 0, 0, 0, 0, 101.333, -19, 0, 0, 0, 0, 355.168, -345 )
-}
-
-[sub_resource type="Curve2D" id=2]
-_data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 71.2343, -19, 0, 0, 0, 0, 272.898, -486, 0, 0, 0, 0, 272.898, -492 )
-}
-
 [node name="Level4" type="Node2D"]
 script = ExtResource( 9 )
 
 [node name="Background" parent="." instance=ExtResource( 10 )]
 position = Vector2( 640, 361 )
 frames = SubResource( 3 )
-frame = 3
+frame = 9
 
 [node name="Player" parent="." instance=ExtResource( 8 )]
-position = Vector2( 1058, 319 )
+position = Vector2( 1221, 180 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Player2" parent="." instance=ExtResource( 8 )]
@@ -62,99 +51,118 @@ scale = Vector2( 0.5, 0.5 )
 isPlayer2 = true
 
 [node name="WordPlatformInteractable" parent="." instance=ExtResource( 11 )]
-position = Vector2( 9, 284 )
-textString = "We can't let those memories"
+position = Vector2( 12, 397 )
+textString = "Whenever"
 
 [node name="WordPlatformInteractable3" parent="." instance=ExtResource( 11 )]
-position = Vector2( 477, 643 )
-textString = "us"
+position = Vector2( 109, 243 )
+textString = "about the"
 fallThoughInGuilt = true
 enableEmotion = true
 impartDistress = true
 
 [node name="WordPlatformInteractable4" parent="." instance=ExtResource( 11 )]
-position = Vector2( 515, 439 )
-textString = "continue."
+position = Vector2( 112, 167 )
+textString = "good,"
 
 [node name="WordPlatformInteractable8" parent="." instance=ExtResource( 11 )]
-position = Vector2( 859, 294 )
-textString = "just makes"
+position = Vector2( 483, 594 )
+textString = "all I can remember is"
+onlyVisibleInContempt = true
 
 [node name="WordPlatformInteractable9" parent="." instance=ExtResource( 11 )]
-position = Vector2( 718, 488 )
-textString = "me so"
+position = Vector2( 264, 601 )
+textString = "and"
 
 [node name="WordPlatformInteractable10" parent="." instance=ExtResource( 11 )]
-position = Vector2( 665, 46 )
-textString = "I just want to"
+position = Vector2( 484, 664 )
+textString = "that cesspool of negativity"
+onlyVisibleInContempt = true
 
 [node name="WordPlatformInteractable11" parent="." instance=ExtResource( 11 )]
-position = Vector2( 1055, 608 )
-textString = "frustrated"
-enableEmotion = true
-impartAnger = true
-
-[node name="WordPlatformInteractable13" parent="." instance=ExtResource( 11 )]
-position = Vector2( 1021, 232 )
-textString = "But it"
-
-[node name="PushableWord3" parent="." instance=ExtResource( 14 )]
-position = Vector2( 222, 90 )
-textString = "really really hurts and"
+position = Vector2( 479, 512 )
+textString = "i hate it."
+onlyVisibleInContempt = true
 
 [node name="WordPlatformInteractable14" parent="." instance=ExtResource( 11 )]
-position = Vector2( 670, 146 )
+position = Vector2( 322, 493 )
 rotation = 0.00109646
-textString = "what happened"
+textString = "bad"
+enableEmotion = true
+impartContempt = true
 
 [node name="WordPlatformInteractable15" parent="." instance=ExtResource( 11 )]
-position = Vector2( 26, 498 )
-textString = "It shouldn't have"
-
-[node name="DistressPlatform" parent="." instance=ExtResource( 13 )]
-position = Vector2( 920, 581 )
-textString = "unbelievebly"
-
-[node name="Path2D" parent="DistressPlatform" index="0"]
-curve = SubResource( 1 )
-
-[node name="PathFollow2D" parent="DistressPlatform/Path2D" index="0"]
-position = Vector2( 101.333, -19 )
-
-[node name="DistressPlatform2" parent="." instance=ExtResource( 13 )]
-position = Vector2( 286, 644 )
-textString = "a hold on"
-
-[node name="Path2D" parent="DistressPlatform2" index="0"]
-curve = SubResource( 2 )
-
-[node name="PathFollow2D" parent="DistressPlatform2/Path2D" index="0"]
-position = Vector2( 71.2343, -19 )
-
-[node name="WordPlatformInteractable16" parent="." instance=ExtResource( 11 )]
-position = Vector2( 881, 124 )
-textString = "forget"
-enableEmotion = true
-impartAnger = true
+position = Vector2( 112, 319 )
+textString = "I think"
 
 [node name="WordPlatformInteractable2" parent="." instance=ExtResource( 11 )]
-position = Vector2( 596, 323 )
+position = Vector2( 11, 502 )
 rotation = 0.00109646
-textString = "go."
+textString = "I remember the"
 
 [node name="Separator2" parent="." instance=ExtResource( 12 )]
 position = Vector2( 646, 514 )
 rotation = 0.00109646
 
 [node name="HeartHandoff" parent="." instance=ExtResource( 3 )]
-position = Vector2( 639, 269 )
+position = Vector2( 652, 579 )
 
 [node name="Exit" parent="HeartHandoff" instance=ExtResource( 7 )]
-position = Vector2( 632, 380 )
+position = Vector2( 652, 299 )
 
-[editable path="DistressPlatform"]
-[editable path="DistressPlatform/Path2D/PathFollow2D/WordPlatformInteractable"]
-[editable path="DistressPlatform/Path2D/PathFollow2D/WordPlatformInteractable/WordPlatformText"]
-[editable path="DistressPlatform2"]
-[editable path="DistressPlatform2/Path2D/PathFollow2D/WordPlatformInteractable"]
-[editable path="DistressPlatform2/Path2D/PathFollow2D/WordPlatformInteractable/WordPlatformText"]
+[node name="WordPlatformInteractable17" parent="." instance=ExtResource( 11 )]
+position = Vector2( 485, 720 )
+textString = "and for what?"
+
+[node name="WordPlatformInteractable5" parent="." instance=ExtResource( 11 )]
+position = Vector2( 785, 452 )
+rotation = 0.00109646
+textString = "talk"
+
+[node name="WordPlatformInteractable6" parent="." instance=ExtResource( 11 )]
+position = Vector2( 784, 563 )
+rotation = 0.00109646
+textString = "Don't"
+
+[node name="WordPlatformInteractable7" parent="." instance=ExtResource( 11 )]
+position = Vector2( 783, 350 )
+rotation = 0.00109646
+textString = "like"
+
+[node name="WordPlatformInteractable12" parent="." instance=ExtResource( 11 )]
+position = Vector2( 788, 252 )
+rotation = 0.00109646
+textString = "that."
+
+[node name="WordPlatformInteractable18" parent="." instance=ExtResource( 11 )]
+position = Vector2( 853, 87 )
+rotation = 0.00109646
+textString = "Just remember all the"
+
+[node name="WordPlatformInteractable20" parent="." instance=ExtResource( 11 )]
+position = Vector2( 985, 379 )
+rotation = 0.00109646
+textString = "say those things"
+
+[node name="WordPlatformInteractable22" parent="." instance=ExtResource( 11 )]
+position = Vector2( 909, 631 )
+rotation = 0.00109646
+textString = "uncomfortable."
+enableEmotion = true
+impartDisgust = true
+
+[node name="WordPlatformInteractable24" parent="." instance=ExtResource( 11 )]
+position = Vector2( 857, 162 )
+rotation = 0.00109646
+textString = "good fun we had."
+
+[node name="WordPlatformBreak" parent="." instance=ExtResource( 13 )]
+position = Vector2( 989, 497 )
+rotation = 0.00109646
+textString = "makes me"
+
+[node name="WordPlatformBreak2" parent="." instance=ExtResource( 13 )]
+position = Vector2( 987, 269 )
+rotation = 0.00109646
+timeToBreak = 10
+textString = "Hearing you"

@@ -17,7 +17,7 @@ _data = {
 script = ExtResource( 6 )
 
 [node name="Background" parent="." instance=ExtResource( 3 )]
-frame = 25
+frame = 21
 
 [node name="WordPlatformInteractable" parent="." instance=ExtResource( 4 )]
 position = Vector2( 147, 186 )

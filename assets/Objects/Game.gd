@@ -24,12 +24,10 @@ func _ready():
 
 
 func _on_death():
-	print("Dead")
 	
 	for i in range(0, $Level.get_child_count()):
 		$Level.get_child(i).queue_free()
 	
 	var levelInstance = levels[levelNum].instance()
-	
-	print(levelInstance.name)
+
 	$Level.add_child(levelInstance)

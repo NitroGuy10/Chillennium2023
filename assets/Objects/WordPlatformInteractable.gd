@@ -13,6 +13,8 @@ export var impartAnger = false
 export var impartDisgust = false
 export var impartContempt = false
 export var impartGuilt = false
+export var impartDistress = false
+
 
 
 export var playSound = false
@@ -44,6 +46,8 @@ func get_emotion():
 		return "contempt"
 	elif impartGuilt:
 		return "guilt"
+	elif impartDistress:
+		return "distress"
 	assert(false)
 
 

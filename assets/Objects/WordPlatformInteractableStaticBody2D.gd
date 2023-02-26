@@ -17,7 +17,8 @@ var TEXT_COLORS = {
 	"anger": Color(1, 0, 0),
 	"disgust": Color(0, 1, 0),
 	"contempt": Color(0, 0, 0),
-	"guilt": Color(0, 1, 1)
+	"guilt": Color(0, 1, 1),
+	"distress": Color(0.5, 0.5, 0.5)	
 }
 
 var pressed = false
@@ -42,6 +43,10 @@ func _ready():
 	richTextLabel = root.get_node("WordPlatformText/RichTextLabel")
 	richTextLabel.set("custom_colors/default_color", textColor)
 #	richTextLabel.add_color_override("font_color", textColor)
+	set_text_collision()
+	
+	
+func set_text_collision():
 	richTextLabel.text = root.textString
 	textBounds = richTextLabel.get_font("normal_font").get_string_size(richTextLabel.text) / 2
 	$CollisionShape2D.scale.x = textBounds.x
@@ -53,9 +58,6 @@ func _ready():
 	get_parent().get_node("StaticBody2D/CollisionShape2D").position.y = 15
 	get_parent().get_node("VisibleArea/CollisionShape2D").position.x = textBounds.x
 	get_parent().get_node("StaticBody2D/CollisionShape2D").position.y = 15
-	
-	
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

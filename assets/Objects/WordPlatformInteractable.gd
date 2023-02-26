@@ -5,6 +5,7 @@ export var textString = "Text!"
 
 export var onlyVisibleInContempt = false
 export var fallThoughInGuilt = false
+export var showImpartColor = true
 
 export var enableEmotion = false
 export var impartHappiness = false
@@ -14,6 +15,8 @@ export var impartDisgust = false
 export var impartContempt = false
 export var impartGuilt = false
 export var impartDistress = false
+export var impartPeace = false
+export var impartHope = false
 
 
 
@@ -48,6 +51,10 @@ func get_emotion():
 		return "guilt"
 	elif impartDistress:
 		return "distress"
+	elif impartPeace:
+		return "peace"
+	elif impartHope:
+		return "hope"
 	assert(false)
 
 

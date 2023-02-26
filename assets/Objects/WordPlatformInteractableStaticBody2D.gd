@@ -18,7 +18,9 @@ var TEXT_COLORS = {
 	"disgust": Color(0, 1, 0),
 	"contempt": Color(0, 0, 0),
 	"guilt": Color(0, 1, 1),
-	"distress": Color(0.5, 0.5, 0.5)	
+	"distress": Color(0.5, 0.5, 0.5),
+	"peace": Color(0, 0, 0.5),
+	"hope": Color(1, 0.5, 0)	
 }
 
 var pressed = false
@@ -41,7 +43,8 @@ func _ready():
 	
 	# Set the CollisionShape2D sizes to that of the text
 	richTextLabel = root.get_node("WordPlatformText/RichTextLabel")
-	richTextLabel.set("custom_colors/default_color", textColor)
+	if root.showImpartColor:
+		richTextLabel.set("custom_colors/default_color", textColor)
 #	richTextLabel.add_color_override("font_color", textColor)
 	set_text_collision()
 	

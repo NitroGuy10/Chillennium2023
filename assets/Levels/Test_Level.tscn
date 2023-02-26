@@ -116,6 +116,20 @@ curve = SubResource( 1 )
 [node name="PathFollow2D" parent="DistressPlatform/Path2D" index="0"]
 position = Vector2( 128, -1 )
 
+[node name="WordPlatformInteractable14" parent="." instance=ExtResource( 4 )]
+position = Vector2( 630, 483 )
+textString = "calm"
+enableEmotion = true
+impartPeace = true
+
+[node name="WordPlatformInteractable" parent="WordPlatformInteractable14" instance=ExtResource( 4 )]
+position = Vector2( 124, -330 )
+textString = "h"
+enableEmotion = true
+impartHope = true
+
 [editable path="DistressPlatform"]
 [editable path="DistressPlatform/Path2D/PathFollow2D/WordPlatformInteractable"]
 [editable path="DistressPlatform/Path2D/PathFollow2D/WordPlatformInteractable/WordPlatformText"]
+[editable path="WordPlatformInteractable14"]
+[editable path="WordPlatformInteractable14/WordPlatformText"]

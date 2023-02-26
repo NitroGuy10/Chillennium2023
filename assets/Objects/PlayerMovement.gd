@@ -7,10 +7,10 @@ onready var player_vars = get_node("/root/PlayerVariables")
 var isPlayer2 = false
 var otherPlayer
 
-var jumpvelocity = 800.0
-var dashvelocity = 1000.0
-var dashHorizScalar = 2.5
-var happyJumpVelocity = 1200.0
+var jumpvelocity = 600.0
+var dashvelocity = 500.0
+var dashHorizScalar = 1.5
+var happyJumpVelocity = 900.0
 var walkspeed = 100.0
 var horizontal_damping = 0.8
 var gravityscale = 1600.0

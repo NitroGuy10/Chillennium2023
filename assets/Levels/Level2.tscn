@@ -3,76 +3,78 @@
 [ext_resource path="res://assets/Objects/Background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Levels/LevelController.gd" type="Script" id=2]
 [ext_resource path="res://assets/Objects/WordPlatformInteractable.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/Objects/Separator.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/Objects/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/Objects/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/Objects/Separator.tscn" type="PackedScene" id=5]
 
-[node name="Level1" type="Node2D"]
+[node name="Level2" type="Node2D"]
 script = ExtResource( 2 )
 
 [node name="Background" parent="." instance=ExtResource( 1 )]
+position = Vector2( 635, 353 )
+frame = 7
 
-[node name="Separator" parent="Background" instance=ExtResource( 4 )]
+[node name="Separator" parent="Background" instance=ExtResource( 5 )]
 position = Vector2( -25.6843, -115.955 )
 
-[node name="Player" parent="." instance=ExtResource( 5 )]
+[node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1081, 214 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Player2" parent="." instance=ExtResource( 5 )]
+[node name="Player2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 36, 129 )
 scale = Vector2( 0.5, 0.5 )
 isPlayer2 = true
 
 [node name="WordPlatformInteractable" parent="." instance=ExtResource( 3 )]
-position = Vector2( 8, 404 )
-textString = "This town"
+position = Vector2( 9, 638 )
+textString = "Remember"
 
 [node name="WordPlatformInteractable2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 393, 356 )
-textString = "It's like"
+position = Vector2( 10, 256 )
+textString = "fun"
 
 [node name="WordPlatformInteractable3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 541, 653 )
-textString = "still"
+position = Vector2( 499, 195 )
+textString = "before?"
 
 [node name="WordPlatformInteractable4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 87, 200 )
-textString = "brings so many memories"
+position = Vector2( 407, 450 )
+textString = "the"
 
 [node name="WordPlatformInteractable5" parent="." instance=ExtResource( 3 )]
-position = Vector2( 403, 579 )
-textString = "stood"
+position = Vector2( 252, 142 )
+textString = "we used to have"
 
 [node name="WordPlatformInteractable6" parent="." instance=ExtResource( 3 )]
-position = Vector2( 276, 494 )
-textString = "time"
+position = Vector2( 154, 611 )
+textString = "all"
 
 [node name="WordPlatformInteractable7" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1036, 326 )
-textString = "back then!"
+position = Vector2( 1083, 306 )
+textString = "tainted"
 enableEmotion = true
-impartHappiness = true
+impartFear = true
 
 [node name="WordPlatformInteractable8" parent="." instance=ExtResource( 3 )]
-position = Vector2( 726, 515 )
-textString = "It's like if"
+position = Vector2( 644, 245 )
+textString = "but... I don't know"
 
 [node name="WordPlatformInteractable9" parent="." instance=ExtResource( 3 )]
-position = Vector2( 878, 412 )
-textString = "we were"
+position = Vector2( 644, 289 )
+textString = "its..."
 
 [node name="WordPlatformInteractable10" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1041, 519 )
-textString = "transported"
+position = Vector2( 829, 497 )
+textString = "with things I wish"
 
 [node name="WordPlatformInteractable11" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1040, 638 )
-textString = "a simpler era."
+position = Vector2( 1049, 645 )
+textString = "think about."
 
 [node name="WordPlatformInteractable12" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1041, 579 )
-textString = "to"
+position = Vector2( 918, 571 )
+textString = "I didn't have to"
 
 [node name="WordPlatformInteractable13" parent="." instance=ExtResource( 3 )]
-position = Vector2( 642, 653 )
-textString = "I know right!"
+position = Vector2( 644, 196 )
+textString = "Yeah, I remember"

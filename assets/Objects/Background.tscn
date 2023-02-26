@@ -38,9 +38,9 @@ animations = [ {
 } ]
 
 [node name="Background" type="AnimatedSprite"]
-position = Vector2( 640.111, 360.25 )
+position = Vector2( 622, 360 )
 scale = Vector2( 0.666204, 0.666204 )
 frames = SubResource( 1 )
-frame = 13
+frame = 22
 playing = true
 script = ExtResource( 28 )

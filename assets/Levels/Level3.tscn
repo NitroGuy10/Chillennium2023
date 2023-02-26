@@ -1,0 +1,97 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/Objects/Background.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/Levels/LevelController.gd" type="Script" id=2]
+[ext_resource path="res://assets/Objects/WordPlatformInteractable.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/Objects/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/Objects/Separator.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/Objects/DistressPlatform.tscn" type="PackedScene" id=6]
+
+[node name="Level2" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Background" parent="." instance=ExtResource( 1 )]
+position = Vector2( 639, 357 )
+frame = 12
+
+[node name="Separator" parent="Background" instance=ExtResource( 5 )]
+position = Vector2( -25.6843, -115.955 )
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1174, 52 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Player2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 32, 104 )
+scale = Vector2( 0.5, 0.5 )
+isPlayer2 = true
+
+[node name="WordPlatformInteractable" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4, 232 )
+textString = "I'm"
+
+[node name="WordPlatformInteractable2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3, 181 )
+textString = "Everytime I come back"
+
+[node name="WordPlatformInteractable3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 306, 550 )
+textString = "happened."
+fallThoughInGuilt = true
+
+[node name="WordPlatformInteractable4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 38, 515 )
+textString = "of what"
+
+[node name="WordPlatformInteractable5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 345, 467 )
+textString = "I did."
+fallThoughInGuilt = true
+
+[node name="WordPlatformInteractable6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 161, 335 )
+textString = "reminded"
+enableEmotion = true
+impartGuilt = true
+
+[node name="WordPlatformInteractable7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 669, 327 )
+textString = "we have to try our best to more past it"
+fallThoughInGuilt = true
+
+[node name="RichTextLabel" parent="WordPlatformInteractable7/WordPlatformText" index="0"]
+margin_right = 1025.0
+margin_bottom = 315.0
+
+[node name="WordPlatformInteractable8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 724, 207 )
+textString = "but..."
+
+[node name="WordPlatformInteractable9" parent="." instance=ExtResource( 3 )]
+position = Vector2( 707, 467 )
+textString = "and"
+
+[node name="WordPlatformInteractable10" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1073, 202 )
+textString = "please"
+enableEmotion = true
+impartDistress = true
+
+[node name="WordPlatformInteractable11" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1012, 631 )
+textString = "new memories"
+
+[node name="WordPlatformInteractable12" parent="." instance=ExtResource( 3 )]
+position = Vector2( 840, 548 )
+textString = "make some"
+
+[node name="DistressPlatform" parent="." instance=ExtResource( 6 )]
+position = Vector2( 221, 656 )
+textString = "what could have been."
+
+[node name="WordPlatformInteractable13" parent="." instance=ExtResource( 3 )]
+position = Vector2( 639, 99 )
+textString = "I know it's hard to be here"
+
+[editable path="WordPlatformInteractable7"]
+[editable path="WordPlatformInteractable7/WordPlatformText"]

@@ -17,7 +17,7 @@ _data = {
 script = ExtResource( 6 )
 
 [node name="Background" parent="." instance=ExtResource( 3 )]
-frame = 25
+frame = 2
 
 [node name="WordPlatformInteractable" parent="." instance=ExtResource( 4 )]
 position = Vector2( 147, 186 )
@@ -101,7 +101,6 @@ impartGuilt = true
 position = Vector2( 224, 685 )
 textString = "help"
 enableEmotion = true
-impartDistress = true
 
 [node name="DistressPlatform" parent="." instance=ExtResource( 7 )]
 position = Vector2( 304, 397 )

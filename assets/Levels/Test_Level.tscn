@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/Objects/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Objects/PushableWord.tscn" type="PackedScene" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://assets/Objects/WordPlatformBreak.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/Levels/LevelController.gd" type="Script" id=6]
 [ext_resource path="res://assets/Objects/DistressPlatform.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/Objects/HeartHandoff.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/Objects/Exit.tscn" type="PackedScene" id=9]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -17,7 +19,7 @@ _data = {
 script = ExtResource( 6 )
 
 [node name="Background" parent="." instance=ExtResource( 3 )]
-frame = 2
+frame = 17
 
 [node name="WordPlatformInteractable" parent="." instance=ExtResource( 4 )]
 position = Vector2( 147, 186 )
@@ -28,7 +30,7 @@ position = Vector2( 393, 192 )
 textString = "am"
 
 [node name="WordPlatformInteractable4" parent="." instance=ExtResource( 4 )]
-position = Vector2( 930, 329 )
+position = Vector2( 1001, 410 )
 textString = "happy!"
 enableEmotion = true
 impartHappiness = true
@@ -41,7 +43,7 @@ textString = "break!!"
 position = Vector2( 336, 32 )
 
 [node name="WordPlatformInteractable3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 651, -3 )
+position = Vector2( 658, 174 )
 textString = "so"
 
 [node name="WordPlatformInteractable5" parent="." instance=ExtResource( 4 )]
@@ -52,9 +54,16 @@ fallThoughInGuilt = true
 [node name="WordPlatformInteractable6" parent="." instance=ExtResource( 4 )]
 position = Vector2( 374, 577 )
 textString = "morning!"
+giveTutorialText = true
 
 [node name="WordPlatformInteractable7" parent="." instance=ExtResource( 4 )]
-position = Vector2( 914, 508 )
+position = Vector2( 914, 510 )
+textString = "scary"
+enableEmotion = true
+impartFear = true
+
+[node name="WordPlatformInteractable16" parent="." instance=ExtResource( 4 )]
+position = Vector2( 833, 594 )
 textString = "scary"
 enableEmotion = true
 impartFear = true
@@ -72,7 +81,7 @@ enableEmotion = true
 impartAnger = true
 
 [node name="WordPlatformInteractable10" parent="." instance=ExtResource( 4 )]
-position = Vector2( 921, 712 )
+position = Vector2( 1075, 292 )
 textString = "hate"
 enableEmotion = true
 impartContempt = true
@@ -87,23 +96,24 @@ scale = Vector2( 0.5, 0.5 )
 isPlayer2 = true
 
 [node name="WordPlatformInteractable11" parent="." instance=ExtResource( 4 )]
-position = Vector2( 651, 285 )
+position = Vector2( 651, 293 )
 textString = "hurt"
 onlyVisibleInContempt = true
 
 [node name="WordPlatformInteractable12" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1127, 236 )
+position = Vector2( 1124, 223 )
 textString = "forget"
 enableEmotion = true
 impartGuilt = true
 
 [node name="WordPlatformInteractable13" parent="." instance=ExtResource( 4 )]
-position = Vector2( 224, 685 )
+position = Vector2( 214, 683 )
 textString = "help"
 enableEmotion = true
+impartDistress = true
 
 [node name="DistressPlatform" parent="." instance=ExtResource( 7 )]
-position = Vector2( 304, 397 )
+position = Vector2( 356, 436 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -116,20 +126,24 @@ curve = SubResource( 1 )
 [node name="PathFollow2D" parent="DistressPlatform/Path2D" index="0"]
 position = Vector2( 128, -1 )
 
-[node name="WordPlatformInteractable14" parent="." instance=ExtResource( 4 )]
-position = Vector2( 630, 483 )
-textString = "calm"
-enableEmotion = true
-impartPeace = true
-
-[node name="WordPlatformInteractable" parent="WordPlatformInteractable14" instance=ExtResource( 4 )]
-position = Vector2( 124, -330 )
+[node name="WordPlatformInteractable15" parent="." instance=ExtResource( 4 )]
+position = Vector2( 754, 153 )
 textString = "h"
 enableEmotion = true
 impartHope = true
 
+[node name="WordPlatformInteractable14" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1162, 662 )
+textString = "calm"
+enableEmotion = true
+impartPeace = true
+
+[node name="Exit" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1275, 92 )
+
+[node name="HeartHandoff" parent="." instance=ExtResource( 8 )]
+position = Vector2( 556, 496 )
+
 [editable path="DistressPlatform"]
 [editable path="DistressPlatform/Path2D/PathFollow2D/WordPlatformInteractable"]
 [editable path="DistressPlatform/Path2D/PathFollow2D/WordPlatformInteractable/WordPlatformText"]
-[editable path="WordPlatformInteractable14"]
-[editable path="WordPlatformInteractable14/WordPlatformText"]

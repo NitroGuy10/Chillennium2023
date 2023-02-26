@@ -1,11 +1,6 @@
 extends Node2D
 
-export var textString = "Text!"
-
-export var impartEmotion = false
-export var emotion = "happy"
-export var playSound = false
-export var textColor = Color(1, 1, 1)
+export var scenePath = "res://###"
 
 
 # Declare member variables here. Examples:
@@ -15,9 +10,10 @@ export var textColor = Color(1, 1, 1)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	assert(scenePath != "res://###")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	if Input.is_action_just_pressed("reset"):
+		get_tree().change_scene(scenePath)

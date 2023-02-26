@@ -19,6 +19,19 @@ var canDoubleJump = false
 
 var velocity = Vector2()
 
+var EMOTION_ANIMATIONS = {
+	"none": "none",
+	"happiness": "happy",
+	"fear": "sad",
+	"anger": "angry",
+	"disgust": "disgust",
+	"contempt": "angry",
+	"guilt": "guilt",
+	"distress": "distress",
+	"peace": "none",
+	"hope": "happy"
+}
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -37,7 +50,28 @@ func _process(delta):
 	$PeaceParticles.emitting = player_vars.currentEmotion == "peace"
 	$HopeParticles.emitting = player_vars.currentEmotion == "hope" and canDoubleJump
 	$DashParticles.emitting = player_vars.currentEmotion == "fear" and canDash
+	
+	if velocity.x > 0:
+		$AnimatedSprite.scale.x = -0.5
+		if player_vars.currentEmotion == "happiness":
+			$AnimatedSprite.position.x = 117
+		else:
+			$AnimatedSprite.position.x = 56
+	else:
+		$AnimatedSprite.scale.x = 0.5
+		if player_vars.currentEmotion == "happiness":
+			$AnimatedSprite.position.x = -122		
+		else:		
+			$AnimatedSprite.position.x = -64
+	
+	if abs(velocity.x) > 10:
+		$AnimatedSprite.animation = "walk_" + EMOTION_ANIMATIONS[player_vars.currentEmotion]
+	else:
+		$AnimatedSprite.animation = "stand_" + EMOTION_ANIMATIONS[player_vars.currentEmotion]
 		
+	
+	
+	
 
 func is_pressed_for_me(key_name: String):
 	if isPlayer2:

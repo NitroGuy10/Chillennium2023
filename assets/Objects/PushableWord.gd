@@ -30,21 +30,21 @@ func _ready():
 func _process(delta):
 	visible = player_vars.currentEmotion != "contempt"
 	
-	if pushed:
-		if pushable:
-			richTextLabel.set("custom_colors/default_color", lerp(richTextLabel.get("custom_colors/default_color"), Color(1, 0, 0), 0.05))
-		else:
-			richTextLabel.set("custom_colors/default_color", lerp(richTextLabel.get("custom_colors/default_color"), Color(1, 0.5, 0.5), 0.05))			
+	if pushable:
+		richTextLabel.set("custom_colors/default_color", lerp(richTextLabel.get("custom_colors/default_color"), Color(1, 0, 0), 0.05))
 	else:
-		richTextLabel.set("custom_colors/default_color", lerp(richTextLabel.get("custom_colors/default_color"), Color(1, 1, 1, 1), 0.05))
+		if pushed:
+			richTextLabel.set("custom_colors/default_color", lerp(richTextLabel.get("custom_colors/default_color"), Color(1, 0.3, 0.3), 0.05))			
+		else:
+			richTextLabel.set("custom_colors/default_color", lerp(richTextLabel.get("custom_colors/default_color"), Color(1, 1, 1), 0.05))
+
 
 func _physics_process(delta):
-	pushable = false
+	pushable = player_vars.currentEmotion == "anger"
 	pushed = false
 	for body in $RigidBody2D/Area2D.get_overlapping_bodies():
 		if "Player" in body.name:
 			pushed = true
-			pushable = player_vars.currentEmotion == "anger"
 	
 	$RigidBody2D.set_collision_layer_bit(7, pushable)
 	$RigidBody2D.set_collision_mask_bit(7, pushable)

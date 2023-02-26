@@ -11,12 +11,13 @@ onready var player_vars = get_node("/root/PlayerVariables")
 var playSound = false
 var textColor = Color(1, 1, 1)
 var TEXT_COLORS = {
-	"none": Color(1, 1, 1),	
+	"none": Color(1, 1, 1),
 	"happiness": Color(1, 1, 0),
 	"fear": Color(0.72, 0, 1),
-	"anger": Color(1, 0, 0)	,
+	"anger": Color(1, 0, 0),
 	"disgust": Color(0, 1, 0),
-	"contempt": Color(0, 0, 0),	
+	"contempt": Color(0, 0, 0),
+	"guilt": Color(0, 1, 1)
 }
 
 var pressed = false
@@ -24,6 +25,7 @@ var nearby = false
 var text
 var textBounds = Vector2(0, 0)
 var root
+var richTextLabel
 
 
 # Called when the node enters the scene tree for the first time.
@@ -37,7 +39,7 @@ func _ready():
 	text = root.get_node("WordPlatformText")
 	
 	# Set the CollisionShape2D sizes to that of the text
-	var richTextLabel = root.get_node("WordPlatformText/RichTextLabel")
+	richTextLabel = root.get_node("WordPlatformText/RichTextLabel")
 	richTextLabel.set("custom_colors/default_color", textColor)
 #	richTextLabel.add_color_override("font_color", textColor)
 	richTextLabel.text = root.textString
@@ -63,8 +65,12 @@ func _process(delta):
 		root.visible = player_vars.currentEmotion != "contempt" or nearby
 	
 	if pressed:
+		if root.fallThoughInGuilt and player_vars.currentEmotion == "guilt":
+			richTextLabel.set("custom_colors/default_color", Color(0, 1, 1))
 		text.position.y = lerp(text.position.y, 0, 0.2)
 	else:
+		if root.fallThoughInGuilt and player_vars.currentEmotion == "guilt":
+			richTextLabel.set("custom_colors/default_color", Color(1, 1, 1))
 		text.position.y = lerp(text.position.y, -10, 0.2)
 
 func _physics_process(delta):
@@ -75,6 +81,12 @@ func _physics_process(delta):
 		get_parent().get_node("VisibleArea").set_collision_mask_bit(7, player_vars.currentEmotion == "contempt")
 		get_parent().get_node("StaticBody2D").set_collision_layer_bit(7, player_vars.currentEmotion == "contempt")
 		get_parent().get_node("StaticBody2D").set_collision_mask_bit(7, player_vars.currentEmotion == "contempt")
+	
+	if root.fallThoughInGuilt:
+		get_parent().get_node("StaticBody2D").set_collision_layer_bit(7, player_vars.currentEmotion != "guilt")
+		get_parent().get_node("StaticBody2D").set_collision_mask_bit(7, player_vars.currentEmotion != "guilt")
+
+	
 	
 	var previous_pressed_status = pressed
 	pressed = false

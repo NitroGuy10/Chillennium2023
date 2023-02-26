@@ -12,7 +12,7 @@ script = ExtResource( 6 )
 scenePath = "res://assets/Levels/Test_Level.tscn"
 
 [node name="Background" parent="." instance=ExtResource( 3 )]
-frame = 23
+frame = 10
 
 [node name="WordPlatformInteractable" parent="." instance=ExtResource( 4 )]
 position = Vector2( 147, 186 )
@@ -42,6 +42,7 @@ textString = "so"
 [node name="WordPlatformInteractable5" parent="." instance=ExtResource( 4 )]
 position = Vector2( 25, 577 )
 textString = "Good"
+fallThoughInGuilt = true
 
 [node name="WordPlatformInteractable6" parent="." instance=ExtResource( 4 )]
 position = Vector2( 374, 577 )
@@ -84,3 +85,9 @@ isPlayer2 = true
 position = Vector2( 651, 285 )
 textString = "hurt"
 onlyVisibleInContempt = true
+
+[node name="WordPlatformInteractable12" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1127, 236 )
+textString = "forget"
+enableEmotion = true
+impartGuilt = true

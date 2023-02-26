@@ -57,26 +57,34 @@ textString = "I'm"
 [node name="WordPlatformInteractable2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 3, 181 )
 textString = "Everytime I come back"
+giveTutorialText = true
+tutorialText = "'R' to restart!"
 
 [node name="WordPlatformInteractable3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 306, 550 )
 textString = "happened."
 fallThoughInGuilt = true
+giveTutorialText = true
+tutorialText = ""
 
 [node name="WordPlatformInteractable4" parent="." instance=ExtResource( 3 )]
 position = Vector2( 38, 515 )
 textString = "of what"
+giveTutorialText = true
+tutorialText = ""
 
 [node name="WordPlatformInteractable5" parent="." instance=ExtResource( 3 )]
 position = Vector2( 345, 467 )
 textString = "I did."
 fallThoughInGuilt = true
+giveTutorialText = true
+tutorialText = ""
 
 [node name="WordPlatformInteractable6" parent="." instance=ExtResource( 3 )]
 position = Vector2( 161, 335 )
 textString = "reminded"
 giveTutorialText = true
-tutorialText = "Guilt can cause you to fall through blocks!"
+tutorialText = "Guilt makes you fall through some blocks!"
 enableEmotion = true
 impartGuilt = true
 
@@ -84,6 +92,8 @@ impartGuilt = true
 position = Vector2( 669, 327 )
 textString = "we have to try our best to more past it"
 fallThoughInGuilt = true
+giveTutorialText = true
+tutorialText = ""
 
 [node name="RichTextLabel" parent="WordPlatformInteractable7/WordPlatformText" index="0"]
 margin_right = 1025.0
@@ -92,26 +102,34 @@ margin_bottom = 315.0
 [node name="WordPlatformInteractable8" parent="." instance=ExtResource( 3 )]
 position = Vector2( 724, 207 )
 textString = "but..."
+giveTutorialText = true
+tutorialText = ""
 
 [node name="WordPlatformInteractable9" parent="." instance=ExtResource( 3 )]
 position = Vector2( 707, 467 )
 textString = "and"
+giveTutorialText = true
+tutorialText = ""
 
 [node name="WordPlatformInteractable10" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1073, 202 )
 textString = "please"
 giveTutorialText = true
-tutorialText = "Distress gives some words movement if you're on them!"
+tutorialText = "Distress makes some words move if you're on them!"
 enableEmotion = true
 impartDistress = true
 
 [node name="WordPlatformInteractable11" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1012, 631 )
 textString = "new memories"
+giveTutorialText = true
+tutorialText = ""
 
 [node name="WordPlatformInteractable12" parent="." instance=ExtResource( 3 )]
 position = Vector2( 840, 548 )
 textString = "make some"
+giveTutorialText = true
+tutorialText = ""
 
 [node name="DistressPlatform" parent="." instance=ExtResource( 6 )]
 position = Vector2( 221, 656 )
@@ -128,7 +146,7 @@ position = Vector2( 639, 99 )
 textString = "I know it's hard to be here"
 
 [node name="Exit" parent="." instance=ExtResource( 8 )]
-position = Vector2( 1246, 637 )
+position = Vector2( 1258, 679 )
 
 [editable path="WordPlatformInteractable7"]
 [editable path="WordPlatformInteractable7/WordPlatformText"]

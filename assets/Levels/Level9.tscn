@@ -26,7 +26,7 @@ script = ExtResource( 2 )
 [node name="Background" parent="." instance=ExtResource( 7 )]
 position = Vector2( 640, 361 )
 frames = SubResource( 1 )
-frame = 3
+frame = 0
 
 [node name="Exit" parent="." instance=ExtResource( 4 )]
 position = Vector2( 662, 457 )
@@ -152,13 +152,13 @@ enableEmotion = true
 impartPeace = true
 
 [node name="WordPlatformInteractable28" parent="." instance=ExtResource( 1 )]
-position = Vector2( 639, 723 )
+position = Vector2( 654, 726 )
 textString = "To"
 enableEmotion = true
 impartPeace = true
 
 [node name="WordPlatformInteractable29" parent="." instance=ExtResource( 1 )]
-position = Vector2( 778, 660 )
+position = Vector2( 757, 667 )
 textString = "share"
 enableEmotion = true
 impartPeace = true

@@ -1,8 +1,33 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://assets/Objects/HeartHandoff.gd" type="Script" id=1]
+[ext_resource path="res://assets/Sprites/Things/handoff/connecting_heart.png" type="Texture" id=2]
+[ext_resource path="res://assets/Sprites/Things/handoff/heart_fillingup/heart_fillingup-4.png" type="Texture" id=3]
+[ext_resource path="res://assets/Sprites/Things/handoff/heart_fillingup/heart_fillingup-6.png" type="Texture" id=4]
+[ext_resource path="res://assets/Sprites/Things/handoff/heart_fillingup/heart_fillingup-1.png" type="Texture" id=5]
+[ext_resource path="res://assets/Sprites/Things/handoff/heart_fillingup/heart_fillingup-5.png" type="Texture" id=6]
+[ext_resource path="res://assets/Sprites/Things/handoff/heart_fillingup/heart_fillingup-2.png" type="Texture" id=7]
+[ext_resource path="res://assets/Sprites/Things/handoff/heart_fillingup/heart_fillingup-3.png" type="Texture" id=8]
+[ext_resource path="res://assets/Sprites/Things/handoff/heart_fillingup/heart_fillingup-7.png" type="Texture" id=9]
+[ext_resource path="res://assets/Sprites/Things/handoff/heart_fillingup/heart_fillingup-8.png" type="Texture" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 3 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": false,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": false,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="HeartHandoff" type="Node2D"]
 script = ExtResource( 1 )
@@ -14,3 +39,13 @@ collision_mask = 129
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 scale = Vector2( 10, 10 )
 shape = SubResource( 1 )
+
+[node name="Sprites" type="Node2D" parent="."]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Sprites"]
+visible = false
+position = Vector2( 75, 63 )
+frames = SubResource( 3 )
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="Sprites"]
+frames = SubResource( 2 )

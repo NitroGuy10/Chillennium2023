@@ -73,6 +73,8 @@ fallThoughInGuilt = true
 [node name="WordPlatformInteractable6" parent="." instance=ExtResource( 3 )]
 position = Vector2( 161, 335 )
 textString = "reminded"
+giveTutorialText = true
+tutorialText = "Guilt can cause you to fall through blocks!"
 enableEmotion = true
 impartGuilt = true
 
@@ -96,6 +98,8 @@ textString = "and"
 [node name="WordPlatformInteractable10" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1073, 202 )
 textString = "please"
+giveTutorialText = true
+tutorialText = "Distress gives some words movement if you're on them!"
 enableEmotion = true
 impartDistress = true
 

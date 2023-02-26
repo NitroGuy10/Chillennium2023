@@ -38,131 +38,169 @@ script = ExtResource( 2 )
 [node name="Background" parent="." instance=ExtResource( 7 )]
 position = Vector2( 640, 361 )
 frames = SubResource( 3 )
-frame = 2
+frame = 10
 
 [node name="Exit" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1494, 34 )
+position = Vector2( 662, 457 )
 
 [node name="HeartHandoff" parent="." instance=ExtResource( 3 )]
-position = Vector2( 653, 573 )
+position = Vector2( 650, 463 )
 scale = Vector2( 0.75, 0.75 )
 
 [node name="Player" parent="." instance=ExtResource( 6 )]
-position = Vector2( 857, 194 )
+position = Vector2( 1185, 235 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Player2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 37, 30 )
+position = Vector2( 113, 134 )
 scale = Vector2( 0.5, 0.5 )
 isPlayer2 = true
 
 [node name="WordPlatformInteractable" parent="." instance=ExtResource( 1 )]
-position = Vector2( 154, 182 )
+position = Vector2( 129, 118 )
 textString = "share"
+enableEmotion = true
+impartPeace = true
 
 [node name="Separator2" parent="." instance=ExtResource( 8 )]
-position = Vector2( 646, 514 )
+position = Vector2( 643, 404 )
 rotation = 0.00109646
 
 [node name="WordPlatformInteractable5" parent="." instance=ExtResource( 1 )]
-position = Vector2( 926, 166 )
+position = Vector2( 932, 48 )
 rotation = 0.00109646
 textString = "heart"
+enableEmotion = true
+impartPeace = true
 
 [node name="WordPlatformInteractable6" parent="." instance=ExtResource( 1 )]
-position = Vector2( 574, 338 )
+position = Vector2( 571, 228 )
 rotation = 0.00109646
 textString = "you"
 fallThoughInGuilt = true
+enableEmotion = true
+impartPeace = true
 
 [node name="WordPlatformInteractable18" parent="." instance=ExtResource( 1 )]
-position = Vector2( 533, 272 )
+position = Vector2( 530, 162 )
 rotation = 0.00109646
 textString = "with"
 enableEmotion = true
-impartGuilt = true
+impartPeace = true
 
 [node name="WordPlatformInteractable20" parent="." instance=ExtResource( 1 )]
-position = Vector2( 789, 208 )
+position = Vector2( 810, 92 )
 rotation = 0.00109646
 textString = "my"
 enableEmotion = true
-impartFear = true
+impartPeace = true
 
 [node name="WordPlatformInteractable24" parent="." instance=ExtResource( 1 )]
-position = Vector2( 350, 138 )
+position = Vector2( 274, 46 )
 rotation = 0.00109646
 textString = "my"
 fallThoughInGuilt = true
+enableEmotion = true
+impartPeace = true
 
 [node name="WordPlatformInteractable19" parent="." instance=ExtResource( 1 )]
-position = Vector2( 507, 204 )
+position = Vector2( 442, 87 )
 textString = "heart"
 fallThoughInGuilt = true
 enableEmotion = true
-impartGuilt = true
+impartPeace = true
 
 [node name="WordPlatformInteractable21" parent="." instance=ExtResource( 1 )]
-position = Vector2( 100, 485 )
+position = Vector2( 97, 375 )
 textString = "share"
+enableEmotion = true
+impartPeace = true
 
 [node name="WordPlatformInteractable8" parent="." instance=ExtResource( 1 )]
-position = Vector2( 675, 345 )
+position = Vector2( 658, 231 )
 rotation = 0.00109646
 textString = "To"
+enableEmotion = true
+impartPeace = true
 
 [node name="WordPlatformInteractable26" parent="." instance=ExtResource( 1 )]
-position = Vector2( 74, 311 )
+position = Vector2( 60, 254 )
 rotation = 0.00109646
 textString = "To"
 fallThoughInGuilt = true
+enableEmotion = true
+impartPeace = true
 
 [node name="WordPlatformInteractable27" parent="." instance=ExtResource( 1 )]
-position = Vector2( 706, 270 )
+position = Vector2( 730, 160 )
 rotation = 0.00109646
 textString = "share"
 fallThoughInGuilt = true
+enableEmotion = true
+impartPeace = true
 
 [node name="WordPlatformInteractable22" parent="." instance=ExtResource( 1 )]
-position = Vector2( 204, 566 )
+position = Vector2( 201, 456 )
 textString = "my"
+enableEmotion = true
+impartPeace = true
 
 [node name="c" parent="." instance=ExtResource( 1 )]
-position = Vector2( 295, 654 )
+position = Vector2( 292, 544 )
 textString = "heart"
+enableEmotion = true
+impartPeace = true
 
 [node name="WordPlatformInteractable23" parent="." instance=ExtResource( 1 )]
-position = Vector2( 427, 684 )
+position = Vector2( 424, 574 )
 textString = "with"
+enableEmotion = true
+impartPeace = true
 
 [node name="WordPlatformInteractable25" parent="." instance=ExtResource( 1 )]
-position = Vector2( 562, 734 )
+position = Vector2( 507, 678 )
 textString = "you."
+enableEmotion = true
+impartPeace = true
 
 [node name="WordPlatformInteractable28" parent="." instance=ExtResource( 1 )]
-position = Vector2( 670, 725 )
+position = Vector2( 639, 723 )
 textString = "To"
+enableEmotion = true
+impartPeace = true
 
 [node name="WordPlatformInteractable29" parent="." instance=ExtResource( 1 )]
-position = Vector2( 797, 713 )
+position = Vector2( 778, 660 )
 textString = "share"
+enableEmotion = true
+impartPeace = true
 
 [node name="WordPlatformInteractable30" parent="." instance=ExtResource( 1 )]
-position = Vector2( 910, 666 )
+position = Vector2( 893, 560 )
 textString = "my"
+enableEmotion = true
+impartPeace = true
 
 [node name="WordPlatformInteractable31" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1003, 580 )
+position = Vector2( 1000, 470 )
 textString = "heart"
+enableEmotion = true
+impartPeace = true
 
 [node name="WordPlatformInteractable32" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1074, 477 )
+position = Vector2( 1071, 367 )
 textString = "with"
+enableEmotion = true
+impartPeace = true
 
 [node name="WordPlatformInteractable33" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1124, 236 )
+position = Vector2( 1095, 124 )
 textString = "with"
+enableEmotion = true
+impartPeace = true
 
 [node name="WordPlatformInteractable34" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1159, 360 )
+position = Vector2( 1145, 263 )
 textString = "you!"
+enableEmotion = true
+impartPeace = true

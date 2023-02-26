@@ -39,7 +39,7 @@ script = ExtResource( 2 )
 [node name="Background" parent="." instance=ExtResource( 8 )]
 position = Vector2( 640, 361 )
 frames = SubResource( 3 )
-frame = 7
+frame = 3
 
 [node name="Exit" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1330, 73.0001 )
@@ -80,7 +80,6 @@ fallThoughInGuilt = true
 position = Vector2( 1032, 164 )
 rotation = 0.00109646
 textString = "Please..."
-enableEmotion = true
 impartGuilt = true
 
 [node name="WordPlatformInteractable20" parent="." instance=ExtResource( 1 )]

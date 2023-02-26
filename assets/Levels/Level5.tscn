@@ -33,13 +33,12 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="Level4" type="Node2D"]
+[node name="Level5" type="Node2D"]
 script = ExtResource( 9 )
 
 [node name="Background" parent="." instance=ExtResource( 10 )]
 position = Vector2( 640, 361 )
 frames = SubResource( 3 )
-frame = 14
 
 [node name="HeartHandoff" parent="." instance=ExtResource( 3 )]
 position = Vector2( 652, 579 )
@@ -95,6 +94,8 @@ onlyVisibleInContempt = true
 position = Vector2( 322, 493 )
 rotation = 0.00109646
 textString = "bad"
+giveTutorialText = true
+tutorialText = "Contempt can both blind and illuminate your way!"
 enableEmotion = true
 impartContempt = true
 
@@ -149,6 +150,8 @@ textString = "say those things"
 position = Vector2( 909, 631 )
 rotation = 0.00109646
 textString = "uncomfortable."
+giveTutorialText = true
+tutorialText = "Disgust makes some words crumble and fall!"
 enableEmotion = true
 impartDisgust = true
 

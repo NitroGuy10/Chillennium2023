@@ -50,7 +50,6 @@ script = ExtResource( 3 )
 [node name="Background" parent="." instance=ExtResource( 4 )]
 position = Vector2( 640, 361 )
 frames = SubResource( 3 )
-frame = 1
 
 [node name="HeartHandoff" parent="." instance=ExtResource( 24 )]
 position = Vector2( 639, 269 )
@@ -141,6 +140,8 @@ position = Vector2( 71.2343, -19 )
 [node name="WordPlatformInteractable16" parent="." instance=ExtResource( 5 )]
 position = Vector2( 881, 124 )
 textString = "forget"
+giveTutorialText = true
+tutorialText = "Anger allows you to push/throw some words!"
 enableEmotion = true
 impartAnger = true
 

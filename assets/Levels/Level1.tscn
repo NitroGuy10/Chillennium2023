@@ -40,6 +40,10 @@ textString = "It's like"
 [node name="WordPlatformInteractable3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 541, 653 )
 textString = "still"
+giveTutorialText = true
+tutorialText = "Peacefull times can feel like slow-mo!"
+enableEmotion = true
+impartPeace = true
 
 [node name="WordPlatformInteractable4" parent="." instance=ExtResource( 3 )]
 position = Vector2( 87, 200 )
@@ -59,6 +63,8 @@ position = Vector2( 943, 206 )
 [node name="WordPlatformInteractable7" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1036, 326 )
 textString = "back then!"
+giveTutorialText = true
+tutorialText = "Jump high for joy (space)!"
 enableEmotion = true
 impartHappiness = true
 

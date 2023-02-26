@@ -1,0 +1,75 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/Objects/Background.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/Levels/LevelController.gd" type="Script" id=2]
+[ext_resource path="res://assets/Objects/WordPlatformInteractable.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/Objects/Player.tscn" type="PackedScene" id=5]
+
+[node name="Level1" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Background" parent="." instance=ExtResource( 1 )]
+frame = 7
+
+[node name="Player" parent="." instance=ExtResource( 5 )]
+position = Vector2( 936, 250 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Player2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 36, 129 )
+scale = Vector2( 0.5, 0.5 )
+isPlayer2 = true
+
+[node name="WordPlatformInteractable" parent="." instance=ExtResource( 3 )]
+position = Vector2( 8, 404 )
+textString = "This town"
+
+[node name="WordPlatformInteractable2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 371, 271 )
+textString = "It's like"
+
+[node name="WordPlatformInteractable3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 501, 605 )
+textString = "still"
+
+[node name="WordPlatformInteractable4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 106, 154 )
+textString = "brings so many memories"
+
+[node name="WordPlatformInteractable4" parent="WordPlatformInteractable4" instance=ExtResource( 3 )]
+position = Vector2( 534, 453 )
+textString = "I know right!"
+
+[node name="WordPlatformInteractable5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 365, 521 )
+textString = "stood"
+
+[node name="WordPlatformInteractable6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 237, 441 )
+textString = "time"
+
+[node name="WordPlatformInteractable7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1031, 335 )
+textString = "back then!"
+enableEmotion = true
+impartHappiness = true
+
+[node name="WordPlatformInteractable8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 748, 473 )
+textString = "It's like if"
+
+[node name="WordPlatformInteractable9" parent="." instance=ExtResource( 3 )]
+position = Vector2( 910, 418 )
+textString = "we were"
+
+[node name="WordPlatformInteractable10" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1041, 519 )
+textString = "transported"
+
+[node name="WordPlatformInteractable11" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1048, 638 )
+textString = "a simpler era."
+
+[node name="WordPlatformInteractable12" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1046, 576 )
+textString = "to"

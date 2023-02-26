@@ -10,6 +10,7 @@
 script = ExtResource( 2 )
 
 [node name="Background" parent="." instance=ExtResource( 1 )]
+frame = 13
 
 [node name="Separator" parent="Background" instance=ExtResource( 4 )]
 position = Vector2( -25.6843, -115.955 )

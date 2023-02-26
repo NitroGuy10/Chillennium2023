@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/Objects/Background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Levels/LevelController.gd" type="Script" id=2]
@@ -7,12 +7,17 @@
 [ext_resource path="res://assets/Objects/Separator.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/Objects/DistressPlatform.tscn" type="PackedScene" id=6]
 
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 73.2409, 0, 0, 0, 0, 0, 193.637, -374, 0, 0, 0, 0, 248.818, -534 )
+}
+
 [node name="Level2" type="Node2D"]
 script = ExtResource( 2 )
 
 [node name="Background" parent="." instance=ExtResource( 1 )]
 position = Vector2( 639, 357 )
-frame = 12
+frame = 24
 
 [node name="Separator" parent="Background" instance=ExtResource( 5 )]
 position = Vector2( -25.6843, -115.955 )
@@ -89,9 +94,18 @@ textString = "make some"
 position = Vector2( 221, 656 )
 textString = "what could have been."
 
+[node name="Path2D" parent="DistressPlatform" index="0"]
+curve = SubResource( 1 )
+
+[node name="PathFollow2D" parent="DistressPlatform/Path2D" index="0"]
+position = Vector2( 73.2409, 0 )
+
 [node name="WordPlatformInteractable13" parent="." instance=ExtResource( 3 )]
 position = Vector2( 639, 99 )
 textString = "I know it's hard to be here"
 
 [editable path="WordPlatformInteractable7"]
 [editable path="WordPlatformInteractable7/WordPlatformText"]
+[editable path="DistressPlatform"]
+[editable path="DistressPlatform/Path2D/PathFollow2D/WordPlatformInteractable"]
+[editable path="DistressPlatform/Path2D/PathFollow2D/WordPlatformInteractable/WordPlatformText"]

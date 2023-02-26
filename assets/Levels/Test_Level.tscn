@@ -17,7 +17,7 @@ _data = {
 script = ExtResource( 6 )
 
 [node name="Background" parent="." instance=ExtResource( 3 )]
-frame = 21
+frame = 24
 
 [node name="WordPlatformInteractable" parent="." instance=ExtResource( 4 )]
 position = Vector2( 147, 186 )
@@ -117,6 +117,14 @@ curve = SubResource( 1 )
 [node name="PathFollow2D" parent="DistressPlatform/Path2D" index="0"]
 position = Vector2( 128, -1 )
 
+[node name="WordPlatformInteractable14" parent="." instance=ExtResource( 4 )]
+position = Vector2( 630, 483 )
+textString = "calm"
+enableEmotion = true
+impartPeace = true
+
 [editable path="DistressPlatform"]
 [editable path="DistressPlatform/Path2D/PathFollow2D/WordPlatformInteractable"]
 [editable path="DistressPlatform/Path2D/PathFollow2D/WordPlatformInteractable/WordPlatformText"]
+[editable path="WordPlatformInteractable14"]
+[editable path="WordPlatformInteractable14/WordPlatformText"]

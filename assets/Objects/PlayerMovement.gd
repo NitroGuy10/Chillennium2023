@@ -32,7 +32,8 @@ func _process(delta):
 	$DisgustParticles.emitting = player_vars.currentEmotion == "disgust"
 	$ContemptParticles.emitting = player_vars.currentEmotion == "contempt"
 	$GuiltParticles.emitting = player_vars.currentEmotion == "guilt"
-	$DistressParticles.emitting = player_vars.currentEmotion == "distress"	
+	$DistressParticles.emitting = player_vars.currentEmotion == "distress"
+	$PeaceParticles.emitting = player_vars.currentEmotion == "peace"
 	$DashParticles.emitting = player_vars.currentEmotion == "fear" and canDash
 		
 
@@ -74,8 +75,11 @@ func _physics_process(delta):
 		if is_pressed_for_me("ui_up"):
 			if player_vars.currentEmotion == "happiness":
 				velocity.y = -happyJumpVelocity
+			elif player_vars.currentEmotion == "peace":
+				velocity.y = -jumpvelocity * 5
 			else:
 				velocity.y = -jumpvelocity
+				
 		else:
 			velocity.y = 0
 	else:
@@ -92,6 +96,8 @@ func _physics_process(delta):
 				velocity.x = dashvelocity * dashHorizScalar
 			else:
 				canDash = true
-			
+	
+	if player_vars.currentEmotion == "peace":
+		velocity *= 0.7
 	
 	move_and_slide(velocity, Vector2.UP)

@@ -6,6 +6,9 @@ extends Node2D
 # var b = "text"
 
 var levels = [
+	preload("res://assets/Levels/Test_Level.tscn"),
+	preload("res://assets/Levels/Level1.tscn"),
+	preload("res://assets/Levels/Level2.tscn"),
 	preload("res://assets/Levels/Level3.tscn")
 ]
 

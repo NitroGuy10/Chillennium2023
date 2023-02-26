@@ -18,4 +18,4 @@ func _ready():
 #	pass
 
 func _physics_process(delta):
-	position = lerp(position, Vector2(playerKB.position.x - 100, playerKB.position.y - 80), 0.8 * delta)
+	position = lerp(position, Vector2(playerKB.position.x - 100, playerKB.position.y - 80), 0.95 * delta)

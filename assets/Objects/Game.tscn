@@ -20,6 +20,7 @@ script = ExtResource( 3 )
 [node name="Level" type="Node2D" parent="."]
 
 [node name="Test_Level" parent="Level" instance=ExtResource( 1 )]
+position = Vector2( 0, 5 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )

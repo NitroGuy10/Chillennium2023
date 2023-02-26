@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/the_end.mp3-6576f75bae88c1ec250b679103fa0243.mp3str"
+
+[deps]
+
+source_file="res://assets/Music/the_end.mp3"
+dest_files=[ "res://.import/the_end.mp3-6576f75bae88c1ec250b679103fa0243.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

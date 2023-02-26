@@ -1,4 +1,4 @@
-[gd_scene load_steps=98 format=2]
+[gd_scene load_steps=99 format=2]
 
 [ext_resource path="res://assets/Sprites/the_end/dissolve into heart-50.png" type="Texture" id=1]
 [ext_resource path="res://assets/Sprites/the_end/dissolve into heart-47.png" type="Texture" id=2]
@@ -94,6 +94,7 @@
 [ext_resource path="res://assets/Sprites/the_end_cool/end scene-export-24.png" type="Texture" id=92]
 [ext_resource path="res://assets/Sprites/the_end_cool/end scene-export-26.png" type="Texture" id=93]
 [ext_resource path="res://assets/Sprites/the_end/dissolve into heart-15.png" type="Texture" id=94]
+[ext_resource path="res://assets/Sprites/credits.png" type="Texture" id=95]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -145,18 +146,21 @@ stream = ExtResource( 40 )
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
 visible = false
-position = Vector2( 656, 370 )
+position = Vector2( 658, 356 )
 scale = Vector2( 0.7, 0.7 )
 frames = SubResource( 3 )
-frame = 22
 playing = true
+
+[node name="Sprite" type="Sprite" parent="AnimatedSprite2"]
+position = Vector2( -35.7144, 1447.14 )
+texture = ExtResource( 95 )
 
 [node name="Timer2" type="Timer" parent="."]
 wait_time = 19.0
 one_shot = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
-[connection signal="timeout" from="Timer2" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer_timeout"]
 
 [editable path="WordPlatformText"]

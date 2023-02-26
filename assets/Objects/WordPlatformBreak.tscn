@@ -11,6 +11,9 @@ script = ExtResource( 1 )
 [node name="RichTextLabel" parent="WordPlatformInteractable/WordPlatformText" index="0"]
 text = "break"
 
+[node name="CollisionShape2D" parent="WordPlatformInteractable/CollisionStuff/VisibleArea" index="0"]
+visible = false
+
 [node name="FallTimer" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true

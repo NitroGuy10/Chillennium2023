@@ -3,11 +3,14 @@ extends Node2D
 
 export var textString = "Text!"
 
+export var onlyVisibleInContempt = false
+
 export var enableEmotion = false
 export var impartHappiness = false
 export var impartFear = false
 export var impartAnger = false
 export var impartDisgust = false
+export var impartContempt = false
 
 
 export var playSound = false
@@ -35,6 +38,8 @@ func get_emotion():
 		return "anger"
 	elif impartDisgust:
 		return "disgust"
+	elif impartContempt:
+		return "contempt"
 	assert(false)
 
 

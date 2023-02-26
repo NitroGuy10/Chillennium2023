@@ -28,6 +28,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	visible = player_vars.currentEmotion != "contempt"
+	
 	if pushed:
 		if pushable:
 			richTextLabel.set("custom_colors/default_color", lerp(richTextLabel.get("custom_colors/default_color"), Color(1, 0, 0), 0.05))

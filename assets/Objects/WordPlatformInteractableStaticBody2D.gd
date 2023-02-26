@@ -15,10 +15,12 @@ var TEXT_COLORS = {
 	"happiness": Color(1, 1, 0),
 	"fear": Color(0.72, 0, 1),
 	"anger": Color(1, 0, 0)	,
-	"disgust": Color(0, 1, 0)	
+	"disgust": Color(0, 1, 0),
+	"contempt": Color(0, 0, 0),	
 }
 
 var pressed = false
+var nearby = false
 var text
 var textBounds = Vector2(0, 0)
 var root
@@ -47,12 +49,18 @@ func _ready():
 	get_parent().get_node("StaticBody2D/CollisionShape2D").scale.y = 20
 	get_parent().get_node("StaticBody2D/CollisionShape2D").position.x = textBounds.x
 	get_parent().get_node("StaticBody2D/CollisionShape2D").position.y = 15
+	get_parent().get_node("VisibleArea/CollisionShape2D").position.x = textBounds.x
+	get_parent().get_node("StaticBody2D/CollisionShape2D").position.y = 15
 	
 	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if root.onlyVisibleInContempt:
+		root.visible = player_vars.currentEmotion == "contempt"
+	else:
+		root.visible = player_vars.currentEmotion != "contempt" or nearby
 	
 	if pressed:
 		text.position.y = lerp(text.position.y, 0, 0.2)
@@ -60,6 +68,14 @@ func _process(delta):
 		text.position.y = lerp(text.position.y, -10, 0.2)
 
 func _physics_process(delta):
+	if root.onlyVisibleInContempt:
+		set_collision_layer_bit(7, player_vars.currentEmotion == "contempt")
+		set_collision_mask_bit(7, player_vars.currentEmotion == "contempt")
+		get_parent().get_node("VisibleArea").set_collision_layer_bit(7, player_vars.currentEmotion == "contempt")
+		get_parent().get_node("VisibleArea").set_collision_mask_bit(7, player_vars.currentEmotion == "contempt")
+		get_parent().get_node("StaticBody2D").set_collision_layer_bit(7, player_vars.currentEmotion == "contempt")
+		get_parent().get_node("StaticBody2D").set_collision_mask_bit(7, player_vars.currentEmotion == "contempt")
+	
 	var previous_pressed_status = pressed
 	pressed = false
 	for body in get_overlapping_bodies():
@@ -73,4 +89,11 @@ func _physics_process(delta):
 					
 					
 			pressed = true
+	
+	nearby = false
+	for body in get_parent().get_node("VisibleArea").get_overlapping_bodies():
+		if "Player" in body.name:
+			nearby = true
+			break
+			
 	

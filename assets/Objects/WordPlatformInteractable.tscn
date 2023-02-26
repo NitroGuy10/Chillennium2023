@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/Objects/WordPlatformInteractableStaticBody2D.gd" type="Script" id=1]
 [ext_resource path="res://assets/Objects/WordPlatformText.tscn" type="PackedScene" id=2]
@@ -7,6 +7,9 @@
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1, 1 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 200, 200 )
 
 [node name="WordPlatformInteractable" type="Node2D"]
 script = ExtResource( 4 )
@@ -37,6 +40,13 @@ collision_mask = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionStuff/StaticBody2D"]
 shape = SubResource( 1 )
+
+[node name="VisibleArea" type="Area2D" parent="CollisionStuff"]
+visible = false
+collision_mask = 129
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionStuff/VisibleArea"]
+shape = SubResource( 2 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )

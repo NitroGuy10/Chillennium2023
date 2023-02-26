@@ -29,7 +29,8 @@ func _ready():
 func _process(delta):
 	$HappyParticles.emitting = player_vars.currentEmotion == "happiness"
 	$AngerParticles.emitting = player_vars.currentEmotion == "anger"
-	$DisgustParticles.emitting = player_vars.currentEmotion == "disgust"	
+	$DisgustParticles.emitting = player_vars.currentEmotion == "disgust"
+	$ContemptParticles.emitting = player_vars.currentEmotion == "contempt"
 	$DashParticles.emitting = player_vars.currentEmotion == "fear" and canDash
 		
 

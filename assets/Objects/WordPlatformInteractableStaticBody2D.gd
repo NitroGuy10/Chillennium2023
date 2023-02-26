@@ -12,7 +12,8 @@ var textColor = Color(1, 1, 1)
 var TEXT_COLORS = {
 	"none": Color(1, 1, 1),	
 	"happiness": Color(1, 1, 0),
-	"fear": Color(0.72, 0, 1)
+	"fear": Color(0.72, 0, 1),
+	"anger": Color(1, 0, 0)	
 }
 
 var pressed = false

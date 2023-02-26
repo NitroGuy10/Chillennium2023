@@ -32,6 +32,11 @@ func _process(delta):
 		$HappyParticles.emitting = true
 	else:
 		$HappyParticles.emitting = false
+		
+	if currentEmotion == "anger":
+		$AngerParticles.emitting = true
+	else:
+		$AngerParticles.emitting = false
 	
 	if currentEmotion == "fear" and canDash:
 		$DashParticles.emitting = true

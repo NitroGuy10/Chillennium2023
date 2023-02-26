@@ -6,6 +6,7 @@ export var textString = "Text!"
 export var enableEmotion = false
 export var impartHappiness = false
 export var impartFear = false
+export var impartAnger = false
 
 export var playSound = false
 #export var textColor = Color(1, 1, 1)
@@ -28,6 +29,8 @@ func get_emotion():
 		return "happiness"
 	elif impartFear:
 		return "fear"
+	elif impartAnger:
+		return "anger"
 	assert(false)
 
 

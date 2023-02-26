@@ -5,6 +5,7 @@ extends Node2D
 # var b = "text"
 
 export var timeToBreak = 1
+export var textString = "Text!"
 
 var breaking = false
 var falling = false
@@ -17,6 +18,8 @@ var yVelocity = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$BreakTimer.wait_time = timeToBreak
+	$WordPlatformInteractable.textString = textString
+	$WordPlatformInteractable/WordPlatformText/RichTextLabel.text = textString
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

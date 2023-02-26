@@ -7,18 +7,46 @@ extends Node2D
 
 export var textString = "Text!"
 
+var pushed = false
+var pushable = false
+var richTextLabel
+
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var richTextLabel = $RigidBody2D/WordPlatformText/RichTextLabel
+	richTextLabel = $RigidBody2D/WordPlatformText/RichTextLabel
 	richTextLabel.text = textString
 	
 	var textBounds = richTextLabel.get_font("normal_font").get_string_size(richTextLabel.text) / 2
 	$RigidBody2D/CollisionShape2D.scale = textBounds
 	$RigidBody2D/CollisionShape2D.position = Vector2(textBounds.x, textBounds.y - 10)
+	$RigidBody2D/Area2D/CollisionShape2D.scale = textBounds * 1.1
+	$RigidBody2D/Area2D/CollisionShape2D.position = Vector2(textBounds.x, textBounds.y - 10)
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	if pushed:
+		if pushable:
+			richTextLabel.set("custom_colors/default_color", lerp(richTextLabel.get("custom_colors/default_color"), Color(1, 0, 0), 0.05))
+		else:
+			richTextLabel.set("custom_colors/default_color", lerp(richTextLabel.get("custom_colors/default_color"), Color(1, 0.5, 0.5), 0.05))			
+	else:
+		richTextLabel.set("custom_colors/default_color", lerp(richTextLabel.get("custom_colors/default_color"), Color(1, 1, 1), 0.05))
+
+func _physics_process(delta):
+	pushable = false
+	pushed = false
+	for body in $RigidBody2D/Area2D.get_overlapping_bodies():
+		if "Player" in body.name:
+			pushed = true
+			pushable = body.currentEmotion == "anger"
+	
+	$RigidBody2D.set_collision_layer_bit(7, pushable)
+	$RigidBody2D.set_collision_mask_bit(7, pushable)
+	$RigidBody2D.set_collision_layer_bit(8, pushable)
+	$RigidBody2D.set_collision_mask_bit(8, pushable)
+		
+	

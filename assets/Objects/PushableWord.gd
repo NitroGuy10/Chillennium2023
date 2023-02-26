@@ -34,7 +34,7 @@ func _process(delta):
 		else:
 			richTextLabel.set("custom_colors/default_color", lerp(richTextLabel.get("custom_colors/default_color"), Color(1, 0.5, 0.5), 0.05))			
 	else:
-		richTextLabel.set("custom_colors/default_color", lerp(richTextLabel.get("custom_colors/default_color"), Color(1, 1, 1), 0.05))
+		richTextLabel.set("custom_colors/default_color", lerp(richTextLabel.get("custom_colors/default_color"), Color(1, 1, 1, 1), 0.05))
 
 func _physics_process(delta):
 	pushable = false

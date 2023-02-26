@@ -1,4 +1,5 @@
 extends Node2D
+onready var player_vars = get_node("/root/PlayerVariables")
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -13,18 +14,27 @@ var falling = false
 var breakingFlipflop = false
 var breakingFrame = false
 var yVelocity = 0
+var richTextLabel
 
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	richTextLabel = $WordPlatformInteractable/WordPlatformText/RichTextLabel
+	
 	$BreakTimer.wait_time = timeToBreak
 	$WordPlatformInteractable.textString = textString
-	$WordPlatformInteractable/WordPlatformText/RichTextLabel.text = textString
+	richTextLabel.text = textString
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if player_vars.currentEmotion == "disgust":
+		richTextLabel.set("custom_colors/default_color", lerp(richTextLabel.get("custom_colors/default_color"), Color(0, 1, 0, 1), 0.05))
+	else:
+		richTextLabel.set("custom_colors/default_color", lerp(richTextLabel.get("custom_colors/default_color"), Color(0, 1, 0, 0), 0.05))
+
+	
 	if breaking:
 		if breakingFrame:
 			if breakingFlipflop:
@@ -38,6 +48,12 @@ func _process(delta):
 
 
 func _physics_process(delta):
+	$WordPlatformInteractable/CollisionStuff/Area2D.set_collision_layer_bit(7, player_vars.currentEmotion == "disgust")
+	$WordPlatformInteractable/CollisionStuff/Area2D.set_collision_mask_bit(7, player_vars.currentEmotion == "disgust")
+	$WordPlatformInteractable/CollisionStuff/StaticBody2D.set_collision_layer_bit(7, player_vars.currentEmotion == "disgust")
+	$WordPlatformInteractable/CollisionStuff/StaticBody2D.set_collision_mask_bit(7, player_vars.currentEmotion == "disgust")
+	
+	
 	if !breaking and $WordPlatformInteractable/CollisionStuff/Area2D.pressed:
 		breaking = true
 		$BreakTimer.start()

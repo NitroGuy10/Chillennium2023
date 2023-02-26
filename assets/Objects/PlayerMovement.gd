@@ -27,20 +27,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if player_vars.currentEmotion == "happiness":
-		$HappyParticles.emitting = true
-	else:
-		$HappyParticles.emitting = false
-		
-	if player_vars.currentEmotion == "anger":
-		$AngerParticles.emitting = true
-	else:
-		$AngerParticles.emitting = false
-	
-	if player_vars.currentEmotion == "fear" and canDash:
-		$DashParticles.emitting = true
-	else:
-		$DashParticles.emitting = false
+	$HappyParticles.emitting = player_vars.currentEmotion == "happiness"
+	$AngerParticles.emitting = player_vars.currentEmotion == "anger"
+	$DisgustParticles.emitting = player_vars.currentEmotion == "disgust"	
+	$DashParticles.emitting = player_vars.currentEmotion == "fear" and canDash
 		
 
 func is_pressed_for_me(key_name: String):

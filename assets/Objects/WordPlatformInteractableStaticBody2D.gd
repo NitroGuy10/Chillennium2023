@@ -14,7 +14,8 @@ var TEXT_COLORS = {
 	"none": Color(1, 1, 1),	
 	"happiness": Color(1, 1, 0),
 	"fear": Color(0.72, 0, 1),
-	"anger": Color(1, 0, 0)	
+	"anger": Color(1, 0, 0)	,
+	"disgust": Color(0, 1, 0)	
 }
 
 var pressed = false
@@ -39,10 +40,14 @@ func _ready():
 #	richTextLabel.add_color_override("font_color", textColor)
 	richTextLabel.text = root.textString
 	textBounds = richTextLabel.get_font("normal_font").get_string_size(richTextLabel.text) / 2
-	$CollisionShape2D.scale = textBounds
-	$CollisionShape2D.position = Vector2(textBounds.x, textBounds.y - 10)
-	get_parent().get_node("StaticBody2D/CollisionShape2D").scale = textBounds
-	get_parent().get_node("StaticBody2D/CollisionShape2D").position = textBounds
+	$CollisionShape2D.scale.x = textBounds.x
+	$CollisionShape2D.scale.y = 20
+	$CollisionShape2D.position = Vector2(textBounds.x, textBounds.y - 30)
+	get_parent().get_node("StaticBody2D/CollisionShape2D").scale.x = textBounds.x
+	get_parent().get_node("StaticBody2D/CollisionShape2D").scale.y = 20
+	get_parent().get_node("StaticBody2D/CollisionShape2D").position.x = textBounds.x
+	get_parent().get_node("StaticBody2D/CollisionShape2D").position.y = 15
+	
 	
 
 

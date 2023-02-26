@@ -49,7 +49,7 @@ scenePath = "res://assets/Levels/Test_Level.tscn"
 position = Vector2( 640.111, 360.25 )
 scale = Vector2( 0.666204, 0.666204 )
 frames = SubResource( 1 )
-frame = 15
+frame = 11
 playing = true
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
@@ -80,28 +80,34 @@ position = Vector2( 951, 103 )
 textString = "break"
 
 [node name="PushableWord" parent="." instance=ExtResource( 2 )]
-position = Vector2( 407, 324 )
+position = Vector2( 336, 32 )
 
 [node name="WordPlatformInteractable3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 693, 191 )
+position = Vector2( 651, -3 )
 textString = "so"
 
 [node name="WordPlatformInteractable5" parent="." instance=ExtResource( 4 )]
 position = Vector2( 25, 577 )
 textString = "Good"
 
-[node name="WordPlatformInteractable" parent="WordPlatformInteractable5" instance=ExtResource( 4 )]
-position = Vector2( 654, 103 )
-textString = "Angr"
-enableEmotion = true
-impartAnger = true
-
 [node name="WordPlatformInteractable6" parent="." instance=ExtResource( 4 )]
 position = Vector2( 374, 577 )
 textString = "morning!"
 
 [node name="WordPlatformInteractable7" parent="." instance=ExtResource( 4 )]
-position = Vector2( 910, 508 )
+position = Vector2( 914, 508 )
 textString = "scary"
 enableEmotion = true
 impartFear = true
+
+[node name="WordPlatformInteractable8" parent="." instance=ExtResource( 4 )]
+position = Vector2( -98, 372 )
+textString = "yuck"
+enableEmotion = true
+impartDisgust = true
+
+[node name="WordPlatformInteractable9" parent="." instance=ExtResource( 4 )]
+position = Vector2( 679, 680 )
+textString = "Angr"
+enableEmotion = true
+impartAnger = true

@@ -1,5 +1,5 @@
 extends KinematicBody2D
-
+onready var player_vars = get_node("/root/PlayerVariables")
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -16,33 +16,28 @@ var horizontal_damping = 0.8
 var gravityscale = 1600.0
 var canDash = false
 
-var currentEmotion = "none"
-
 var velocity = Vector2()
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	isPlayer2 = get_parent().isPlayer2
-	if isPlayer2:
-		otherPlayer = get_parent().get_parent().get_node("Player")
-	else:
-		otherPlayer = get_parent().get_parent().get_node("Player2")
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if currentEmotion == "happiness":
+	if player_vars.currentEmotion == "happiness":
 		$HappyParticles.emitting = true
 	else:
 		$HappyParticles.emitting = false
 		
-	if currentEmotion == "anger":
+	if player_vars.currentEmotion == "anger":
 		$AngerParticles.emitting = true
 	else:
 		$AngerParticles.emitting = false
 	
-	if currentEmotion == "fear" and canDash:
+	if player_vars.currentEmotion == "fear" and canDash:
 		$DashParticles.emitting = true
 	else:
 		$DashParticles.emitting = false
@@ -81,10 +76,10 @@ func _physics_process(delta):
 		velocity.y = max(velocity.y, 0)
 	
 	if actually_is_on_floor():
-		if currentEmotion == "fear":
+		if player_vars.currentEmotion == "fear":
 			canDash = true
 		if is_pressed_for_me("ui_up"):
-			if currentEmotion == "happiness":
+			if player_vars.currentEmotion == "happiness":
 				velocity.y = -happyJumpVelocity
 			else:
 				velocity.y = -jumpvelocity
@@ -107,7 +102,3 @@ func _physics_process(delta):
 			
 	
 	move_and_slide(velocity, Vector2.UP)
-
-
-func _on_PlayerKinematicBody2D_newEmotion(emotion):
-	print("bingus! " + emotion)

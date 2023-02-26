@@ -14,6 +14,10 @@ config/name="Chillennium2023"
 run/main_scene="res://assets/Levels/Test_Level.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+PlayerVariables="*res://assets/Objects/PlayerVariables.gd"
+
 [display]
 
 window/size/width=1280

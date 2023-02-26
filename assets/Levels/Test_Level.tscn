@@ -49,7 +49,7 @@ scenePath = "res://assets/Levels/Test_Level.tscn"
 position = Vector2( 640.111, 360.25 )
 scale = Vector2( 0.666204, 0.666204 )
 frames = SubResource( 1 )
-frame = 16
+frame = 15
 playing = true
 
 [node name="Player" parent="." instance=ExtResource( 1 )]

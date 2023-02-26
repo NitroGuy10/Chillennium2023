@@ -15,6 +15,7 @@ var breakingFrame = false
 var yVelocity = 0
 
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$BreakTimer.wait_time = timeToBreak

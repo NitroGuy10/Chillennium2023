@@ -1,5 +1,5 @@
 extends Node2D
-
+onready var player_vars = get_node("/root/PlayerVariables")
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -42,7 +42,7 @@ func _physics_process(delta):
 	for body in $RigidBody2D/Area2D.get_overlapping_bodies():
 		if "Player" in body.name:
 			pushed = true
-			pushable = body.currentEmotion == "anger"
+			pushable = player_vars.currentEmotion == "anger"
 	
 	$RigidBody2D.set_collision_layer_bit(7, pushable)
 	$RigidBody2D.set_collision_mask_bit(7, pushable)

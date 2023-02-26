@@ -23,7 +23,7 @@ var levels = [
 
 var transition = preload("res://assets/Objects/ScreenTransition.tscn")
 
-var levelNum = 8
+var levelNum = 0
 
 
 # Called when the node enters the scene tree for the first time.

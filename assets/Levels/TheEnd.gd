@@ -5,6 +5,8 @@ extends Node2D
 # var a = 2
 # var b = "text"
 
+var credits = false
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,8 +18,9 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	if credits:
+		$AnimatedSprite2/Sprite.position.y -= 50 * delta
 
 
 func _on_Timer_timeout():
@@ -27,3 +30,4 @@ func _on_Timer_timeout():
 func _on_Timer2_timeout():
 	$AnimatedSprite2.visible = true
 	$AudioStreamPlayer2.play()
+	credits = true

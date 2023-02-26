@@ -28,7 +28,7 @@ stream = ExtResource( 2 )
 
 [node name="AudioStreamPlayerWin" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
-volume_db = 3.496
+volume_db = 3.0
 
 [node name="Boundaries" type="StaticBody2D" parent="."]
 collision_layer = 129

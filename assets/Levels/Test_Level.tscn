@@ -31,7 +31,7 @@ script = ExtResource( 6 )
 
 [node name="Background" parent="." instance=ExtResource( 3 )]
 frames = SubResource( 2 )
-frame = 0
+frame = 2
 
 [node name="WordPlatformInteractable" parent="." instance=ExtResource( 4 )]
 position = Vector2( 147, 186 )

@@ -1,5 +1,5 @@
 extends Node2D
-
+onready var player_vars = get_node("/root/PlayerVariables")
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -27,6 +27,7 @@ func _ready():
 
 
 func _on_death():
+	player_vars.exitOpen = false
 	
 	for i in range(0, $Level.get_child_count()):
 		$Level.get_child(i).queue_free()

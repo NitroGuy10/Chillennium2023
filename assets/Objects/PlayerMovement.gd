@@ -51,6 +51,10 @@ func is_just_pressed_for_me(key_name: String):
 	else:
 		return Input.is_action_just_pressed(key_name)
 
+func actually_is_on_floor():
+	return is_on_floor() || $PushableWordRayCast.is_colliding() || $PushableWordRayCast2.is_colliding()
+
+
 func _physics_process(delta):
 	if is_pressed_for_me("ui_left"):
 		velocity.x -= walkspeed
@@ -58,9 +62,15 @@ func _physics_process(delta):
 		velocity.x += walkspeed
 	velocity.x *= horizontal_damping
 	
+	# If standing on PushableWord
+	if $PushableWordRayCast.is_colliding() || $PushableWordRayCast2.is_colliding(): 
+		velocity.y = min(velocity.y, 0)
 	
+	# If hitting head on ceiling
+	if $CeilingRayCast.is_colliding() || $CeilingRayCast2.is_colliding():
+		velocity.y = max(velocity.y, 0)
 	
-	if is_on_floor():
+	if actually_is_on_floor():
 		if currentEmotion == "fear":
 			canDash = true
 		if is_pressed_for_me("ui_up"):
@@ -85,5 +95,5 @@ func _physics_process(delta):
 			else:
 				canDash = true
 			
-
+	
 	move_and_slide(velocity, Vector2.UP)

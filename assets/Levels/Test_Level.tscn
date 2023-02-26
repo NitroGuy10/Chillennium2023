@@ -19,21 +19,6 @@ position = Vector2( 190, 44 )
 scale = Vector2( 0.5, 0.5 )
 isPlayer2 = true
 
-[node name="PushableWord" parent="." instance=ExtResource( 2 )]
-position = Vector2( 378, 256 )
-scale = Vector2( 1.00516, 1 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" parent="PushableWord/RigidBody2D" index="0"]
-position = Vector2( 107.5, 44.5 )
-scale = Vector2( 0.64185, 1 )
-
-[node name="RichTextLabel" parent="PushableWord/RigidBody2D/WordPlatformText" index="0"]
-custom_colors/default_color = Color( 0.0588235, 0.564706, 1, 1 )
-text = "sad"
-
 [node name="WordPlatformInteractable" parent="." instance=ExtResource( 4 )]
 position = Vector2( 167, 181 )
 textString = "I"
@@ -57,6 +42,9 @@ textString = "hate"
 [node name="RichTextLabel" parent="WordPlatformBreak/WordPlatformInteractable/WordPlatformText" index="0"]
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 
+[node name="PushableWord" parent="." instance=ExtResource( 2 )]
+position = Vector2( 476, 385 )
+
 [node name="WordPlatformInteractable3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 586, 161 )
 textString = "so"
@@ -75,8 +63,6 @@ textString = "scary"
 enableEmotion = true
 impartFear = true
 
-[editable path="PushableWord"]
-[editable path="PushableWord/RigidBody2D/WordPlatformText"]
 [editable path="WordPlatformBreak"]
 [editable path="WordPlatformBreak/WordPlatformInteractable"]
 [editable path="WordPlatformBreak/WordPlatformInteractable/WordPlatformText"]

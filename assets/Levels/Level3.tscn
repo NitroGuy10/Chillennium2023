@@ -29,24 +29,18 @@ script = ExtResource( 2 )
 [node name="Background" parent="." instance=ExtResource( 1 )]
 position = Vector2( 639, 357 )
 frames = SubResource( 2 )
-frame = 0
+frame = 1
 
 [node name="Separator" parent="." instance=ExtResource( 5 )]
 position = Vector2( 620.606, 274.328 )
 scale = Vector2( 0.716146, 0.712963 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1135, 52 )
+position = Vector2( 1174, 52 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="HeartHandoff" parent="Player" instance=ExtResource( 49 )]
-position = Vector2( -1022, 32 )
-
-[node name="Exit" parent="Player" instance=ExtResource( 50 )]
-position = Vector2( 216, 1208 )
-
 [node name="Player2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 39, 53 )
+position = Vector2( 32, 104 )
 scale = Vector2( 0.5, 0.5 )
 isPlayer2 = true
 
@@ -102,11 +96,11 @@ enableEmotion = true
 impartDistress = true
 
 [node name="WordPlatformInteractable11" parent="." instance=ExtResource( 3 )]
-position = Vector2( 989, 641 )
+position = Vector2( 1012, 631 )
 textString = "new memories"
 
 [node name="WordPlatformInteractable12" parent="." instance=ExtResource( 3 )]
-position = Vector2( 842, 547 )
+position = Vector2( 840, 548 )
 textString = "make some"
 
 [node name="DistressPlatform" parent="." instance=ExtResource( 6 )]

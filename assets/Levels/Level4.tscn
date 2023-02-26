@@ -50,7 +50,7 @@ script = ExtResource( 3 )
 [node name="Background" parent="." instance=ExtResource( 4 )]
 position = Vector2( 640, 361 )
 frames = SubResource( 3 )
-frame = 6
+frame = 10
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1058, 319 )

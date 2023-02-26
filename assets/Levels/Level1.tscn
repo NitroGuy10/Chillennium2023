@@ -1,32 +1,21 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/Objects/Background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Levels/LevelController.gd" type="Script" id=2]
 [ext_resource path="res://assets/Objects/WordPlatformInteractable.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/Objects/Separator.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/Objects/Player.tscn" type="PackedScene" id=5]
-[ext_resource path="res://assets/Sprites/Backgrounds/level1/LEVEL_1.0-1.png" type="Texture" id=6]
-[ext_resource path="res://assets/Sprites/Backgrounds/level1/LEVEL_1.0-0.png" type="Texture" id=7]
-[ext_resource path="res://assets/Sprites/Backgrounds/level1/LEVEL_1.0-2.png" type="Texture" id=8]
-
-[sub_resource type="SpriteFrames" id=1]
-animations = [ {
-"frames": [ ExtResource( 7 ), ExtResource( 6 ), ExtResource( 8 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-} ]
+[ext_resource path="res://assets/Objects/HeartHandoff.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/Objects/Exit.tscn" type="PackedScene" id=7]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 2 )
 
 [node name="Background" parent="." instance=ExtResource( 1 )]
-frames = SubResource( 1 )
 frame = 2
 
-[node name="Separator" parent="." instance=ExtResource( 4 )]
-position = Vector2( 622.106, 276.328 )
-scale = Vector2( 0.716146, 0.712963 )
+[node name="Separator" parent="Background" instance=ExtResource( 4 )]
+position = Vector2( -25.6843, -115.955 )
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1060, 192 )

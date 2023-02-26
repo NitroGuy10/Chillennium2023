@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/Objects/WordPlatformText.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/Objects/EmotionFlyup.gd" type="Script" id=2]
+
+[node name="EmotionFlyup" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="WordPlatformText" parent="." instance=ExtResource( 1 )]
+scale = Vector2( 3, 3 )
+
+[node name="RichTextLabel" parent="WordPlatformText" index="0"]
+margin_left = -232.0
+margin_top = -37.0
+margin_right = 240.0
+margin_bottom = 188.0
+bbcode_enabled = true
+bbcode_text = "[center]Contempt[/center]"
+text = "Contempt"
+
+[editable path="WordPlatformText"]

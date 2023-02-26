@@ -316,7 +316,7 @@ script = ExtResource( 63 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Heart"]
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 3 )
-frame = 50
+frame = 53
 playing = true
 
 [editable path="TutorialText"]

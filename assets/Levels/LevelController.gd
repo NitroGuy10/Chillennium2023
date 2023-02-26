@@ -1,4 +1,5 @@
 extends Node2D
+onready var player_vars = get_node("/root/PlayerVariables")
 
 signal death
 
@@ -12,6 +13,7 @@ signal death
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	player_vars.currentEmotion = "none"
 	connect("death", get_parent().get_parent(), "_on_death")
 
 

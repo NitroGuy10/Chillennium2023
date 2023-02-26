@@ -19,7 +19,8 @@ var TEXT_COLORS = {
 	"contempt": Color(0, 0, 0),
 	"guilt": Color(0, 1, 1),
 	"distress": Color(0.5, 0.5, 0.5),
-	"peace": Color(0, 0, 0.5)
+	"peace": Color(0, 0, 0.5),
+	"hope": Color(1, 0.5, 0)	
 }
 
 var pressed = false

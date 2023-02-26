@@ -133,6 +133,19 @@ initial_velocity = 88.0
 scale_amount = 0.01
 color = Color( 0, 0, 0.501961, 1 )
 
+[node name="HopeParticles" type="CPUParticles2D" parent="PlayerKinematicBody2D"]
+emitting = false
+local_coords = false
+texture = ExtResource( 4 )
+emission_shape = 2
+emission_rect_extents = Vector2( 20, 20 )
+direction = Vector2( 0, 0 )
+spread = 180.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 88.0
+scale_amount = 0.01
+color = Color( 1, 0.501961, 0, 1 )
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerKinematicBody2D"]
 shape = SubResource( 2 )
 

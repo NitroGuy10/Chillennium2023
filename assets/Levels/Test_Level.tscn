@@ -17,7 +17,7 @@ _data = {
 script = ExtResource( 6 )
 
 [node name="Background" parent="." instance=ExtResource( 3 )]
-frame = 24
+frame = 3
 
 [node name="WordPlatformInteractable" parent="." instance=ExtResource( 4 )]
 position = Vector2( 147, 186 )
@@ -122,6 +122,12 @@ position = Vector2( 630, 483 )
 textString = "calm"
 enableEmotion = true
 impartPeace = true
+
+[node name="WordPlatformInteractable" parent="WordPlatformInteractable14" instance=ExtResource( 4 )]
+position = Vector2( 124, -330 )
+textString = "h"
+enableEmotion = true
+impartHope = true
 
 [editable path="DistressPlatform"]
 [editable path="DistressPlatform/Path2D/PathFollow2D/WordPlatformInteractable"]

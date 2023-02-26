@@ -16,6 +16,7 @@ export var impartContempt = false
 export var impartGuilt = false
 export var impartDistress = false
 export var impartPeace = false
+export var impartHope = false
 
 
 
@@ -52,6 +53,8 @@ func get_emotion():
 		return "distress"
 	elif impartPeace:
 		return "peace"
+	elif impartHope:
+		return "hope"
 	assert(false)
 
 

@@ -15,6 +15,7 @@ var walkspeed = 100.0
 var horizontal_damping = 0.8
 var gravityscale = 1600.0
 var canDash = false
+var canDoubleJump = false
 
 var velocity = Vector2()
 
@@ -34,6 +35,7 @@ func _process(delta):
 	$GuiltParticles.emitting = player_vars.currentEmotion == "guilt"
 	$DistressParticles.emitting = player_vars.currentEmotion == "distress"
 	$PeaceParticles.emitting = player_vars.currentEmotion == "peace"
+	$HopeParticles.emitting = player_vars.currentEmotion == "hope" and canDoubleJump
 	$DashParticles.emitting = player_vars.currentEmotion == "fear" and canDash
 		
 
@@ -72,6 +74,8 @@ func _physics_process(delta):
 	if actually_is_on_floor():
 		if player_vars.currentEmotion == "fear":
 			canDash = true
+		if player_vars.currentEmotion == "hope":
+			canDoubleJump = true
 		if is_pressed_for_me("ui_up"):
 			if player_vars.currentEmotion == "happiness":
 				velocity.y = -happyJumpVelocity
@@ -96,6 +100,10 @@ func _physics_process(delta):
 				velocity.x = dashvelocity * dashHorizScalar
 			else:
 				canDash = true
+		elif canDoubleJump and player_vars.currentEmotion == "hope" and is_just_pressed_for_me("ui_up"):
+			canDoubleJump = false
+			velocity.y = -jumpvelocity
+			
 	
 	if player_vars.currentEmotion == "peace":
 		velocity *= 0.7

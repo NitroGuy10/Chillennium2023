@@ -13,7 +13,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if $Path2D/PathFollow2D.offset > 2600:
+	if $Path2D/PathFollow2D.offset > 3300:
 		get_parent().transitioning = false
 		queue_free()
 	else:

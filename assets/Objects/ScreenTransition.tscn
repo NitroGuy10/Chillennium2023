@@ -1,17 +1,19 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://assets/Sprites/Things/leather.png" type="Texture" id=1]
+[ext_resource path="res://assets/Sprites/Things/ripepd_leather.png" type="Texture" id=1]
 [ext_resource path="res://assets/Objects/ScreenTransition.gd" type="Script" id=2]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 1759, 1164, 0, 0, 0, 0, -573, -392 )
+"points": PoolVector2Array( 0, 0, 0, 0, 1759, 1164, 0, 0, 0, 0, -3042.18, 1085 )
 }
 
 [node name="ScreenTransition" type="Node2D"]
 script = ExtResource( 2 )
 
 [node name="Path2D" type="Path2D" parent="."]
+position = Vector2( 680, -793 )
+rotation = -0.0181387
 curve = SubResource( 1 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
@@ -20,7 +22,7 @@ rotation = -2.5532
 rotate = false
 
 [node name="Sprite" type="Sprite" parent="Path2D/PathFollow2D"]
-position = Vector2( -16.7166, -2.32336 )
-rotation = -0.980721
-scale = Vector2( 1.97628, 1.27362 )
+position = Vector2( 136.353, -140.677 )
+rotation = -0.573862
+scale = Vector2( 1.06001, 1.27362 )
 texture = ExtResource( 1 )

@@ -1,6 +1,6 @@
 extends Node2D
 
-export var scenePath = "res://###"
+signal death
 
 
 
@@ -12,12 +12,12 @@ export var scenePath = "res://###"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	assert(scenePath != "res://###")
+	connect("death", get_parent().get_parent(), "_on_death")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Input.is_action_just_pressed("reset"):
-		get_tree().change_scene(scenePath)
+		emit_signal("death")
 
 

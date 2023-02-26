@@ -5,12 +5,16 @@ onready var player_vars = get_node("/root/PlayerVariables")
 # var a = 2
 # var b = "text"
 
+var transitioning = false
+
 var levels = [
 	preload("res://assets/Levels/Test_Level.tscn"),
 	preload("res://assets/Levels/Level1.tscn"),
 	preload("res://assets/Levels/Level2.tscn"),
 	preload("res://assets/Levels/Level3.tscn")
 ]
+
+var transition = preload("res://assets/Objects/ScreenTransition.tscn")
 
 var levelNum = 0
 
@@ -25,13 +29,18 @@ func _ready():
 #func _process(delta):
 #	pass
 
-
-func _on_death():
-	player_vars.exitOpen = false
-	
+func reload_scene():
 	for i in range(0, $Level.get_child_count()):
 		$Level.get_child(i).queue_free()
 	
 	var levelInstance = levels[levelNum].instance()
 
 	$Level.add_child(levelInstance)
+
+func _on_death():
+	if not transitioning:
+		transitioning = true
+		player_vars.exitOpen = false
+		add_child(transition.instance())
+	
+	

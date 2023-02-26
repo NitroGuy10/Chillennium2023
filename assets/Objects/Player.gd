@@ -13,6 +13,9 @@ func _ready():
 	if not isPlayer2:
 		$Heart/AnimatedSprite.animation = "explode"
 		$Heart.visible = false
+		$PlayerKinematicBody2D/AnimatedSprite.modulate = Color(0.6, 0.6, 1)		
+	else:
+		$PlayerKinematicBody2D/AnimatedSprite.modulate = Color(1, 0.6, 0.6)
 
 
 

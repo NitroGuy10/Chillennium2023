@@ -37,6 +37,9 @@ func _ready():
 #	pass
 
 func reload_scene():
+	if levelNum == 9:
+		$AudioStreamPlayer.stop()
+	
 	for i in range(0, $Level.get_child_count()):
 		$Level.get_child(i).queue_free()
 	
@@ -44,8 +47,10 @@ func reload_scene():
 
 	$Level.add_child(levelInstance)
 
-func _on_death():
+func _on_death(win = false):
 	if not transitioning:
+		if win:
+			levelNum += 1
 		transitioning = true
 		player_vars.exitOpen = false
 		add_child(transition.instance())

@@ -31,7 +31,7 @@ script = ExtResource( 2 )
 [node name="Background" parent="." instance=ExtResource( 1 )]
 position = Vector2( 639, 357 )
 frames = SubResource( 2 )
-frame = 2
+frame = 1
 
 [node name="HeartHandoff" parent="." instance=ExtResource( 7 )]
 position = Vector2( 630, 75 )
@@ -119,12 +119,12 @@ curve = SubResource( 1 )
 [node name="PathFollow2D" parent="DistressPlatform/Path2D" index="0"]
 position = Vector2( 73.2409, 0 )
 
-[node name="Exit" parent="DistressPlatform" instance=ExtResource( 8 )]
-position = Vector2( 1025, -19 )
-
 [node name="WordPlatformInteractable13" parent="." instance=ExtResource( 3 )]
 position = Vector2( 639, 99 )
 textString = "I know it's hard to be here"
+
+[node name="Exit" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1246, 637 )
 
 [editable path="WordPlatformInteractable7"]
 [editable path="WordPlatformInteractable7/WordPlatformText"]

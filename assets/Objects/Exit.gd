@@ -20,5 +20,4 @@ func _physics_process(delta):
 	
 	for body in $Area2D.get_overlapping_bodies():
 		if "Player" in body.name:
-			get_parent().get_parent().get_parent().levelNum += 1
-			get_parent().get_parent().get_parent()._on_death()
+			get_parent().get_parent().get_parent()._on_death(true)

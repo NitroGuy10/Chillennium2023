@@ -20,9 +20,11 @@ func _ready():
 	
 	var textBounds = richTextLabel.get_font("normal_font").get_string_size(richTextLabel.text) / 2
 	$RigidBody2D/CollisionShape2D.scale = textBounds
-	$RigidBody2D/CollisionShape2D.position = Vector2(textBounds.x, textBounds.y - 10)
-	$RigidBody2D/Area2D/CollisionShape2D.scale = textBounds * 1.1
-	$RigidBody2D/Area2D/CollisionShape2D.position = Vector2(textBounds.x, textBounds.y - 10)
+	$RigidBody2D/CollisionShape2D.scale.y = 10
+	$RigidBody2D/CollisionShape2D.position = Vector2(textBounds.x, textBounds.y - 15)
+	$RigidBody2D/Area2D/CollisionShape2D.scale.x = textBounds.x
+	$RigidBody2D/Area2D/CollisionShape2D.scale.y = textBounds.y * 1.1
+	$RigidBody2D/Area2D/CollisionShape2D.position = Vector2(textBounds.x, textBounds.y - 15)
 	
 
 

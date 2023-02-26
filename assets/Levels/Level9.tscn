@@ -38,6 +38,7 @@ script = ExtResource( 2 )
 [node name="Background" parent="." instance=ExtResource( 7 )]
 position = Vector2( 640, 361 )
 frames = SubResource( 3 )
+frame = 3
 
 [node name="Exit" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1494, 34 )

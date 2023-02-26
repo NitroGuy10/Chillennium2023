@@ -13,8 +13,9 @@ script = ExtResource( 2 )
 
 [node name="Background" parent="." instance=ExtResource( 1 )]
 
-[node name="Separator" parent="Background" instance=ExtResource( 4 )]
-position = Vector2( -25.6843, -115.955 )
+[node name="Separator" parent="." instance=ExtResource( 4 )]
+position = Vector2( 622.106, 276.328 )
+scale = Vector2( 0.716146, 0.712963 )
 
 [node name="HeartHandoff" parent="." instance=ExtResource( 6 )]
 position = Vector2( 604, 673 )

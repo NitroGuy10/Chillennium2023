@@ -5,6 +5,7 @@ extends KinematicBody2D
 # var a = 2
 # var b = "text"
 var isPlayer2 = false
+var otherPlayer
 
 var jumpvelocity = 800.0
 var dashvelocity = 1000.0
@@ -23,7 +24,10 @@ var velocity = Vector2()
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	isPlayer2 = get_parent().isPlayer2
-	pass # Replace with function body.
+	if isPlayer2:
+		otherPlayer = get_parent().get_parent().get_node("Player")
+	else:
+		otherPlayer = get_parent().get_parent().get_node("Player2")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -61,6 +65,7 @@ func actually_is_on_floor():
 
 
 func _physics_process(delta):
+
 	if is_pressed_for_me("ui_left"):
 		velocity.x -= walkspeed
 	elif is_pressed_for_me("ui_right"):
@@ -102,3 +107,7 @@ func _physics_process(delta):
 			
 	
 	move_and_slide(velocity, Vector2.UP)
+
+
+func _on_PlayerKinematicBody2D_newEmotion(emotion):
+	print("bingus! " + emotion)

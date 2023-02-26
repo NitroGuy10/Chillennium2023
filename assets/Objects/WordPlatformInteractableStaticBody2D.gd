@@ -61,6 +61,7 @@ func _physics_process(delta):
 			if previous_pressed_status == false:
 				if root.enableEmotion:
 					body.currentEmotion = root.get_emotion()
+					body.otherPlayer.get_node("PlayerKinematicBody2D").currentEmotion = root.get_emotion()
 				if playSound:
 					get_parent().get_parent().get_node("AudioStreamPlayer").play(false)	
 					get_parent().get_parent().get_node("AudioStreamPlayer")

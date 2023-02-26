@@ -10,7 +10,7 @@ export var isPlayer2 = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if isPlayer2:
+	if not isPlayer2:
 		$Heart/AnimatedSprite.animation = "explode"
 		$Heart.visible = false
 

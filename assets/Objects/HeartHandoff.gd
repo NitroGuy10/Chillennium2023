@@ -23,9 +23,9 @@ func _physics_process(delta):
 	
 	if num_players >= 2:
 		for body in $Area2D.get_overlapping_bodies():
-			if body.get_parent().name == "Player":
+			if body.get_parent().name == "Player2":
 				body.get_parent().get_node("Heart").visible = false
-			elif body.get_parent().name == "Player2":
+			elif body.get_parent().name == "Player":
 				body.get_parent().get_node("Heart").visible = true
 		
 		$Area2D/CollisionShape2D.disabled = true

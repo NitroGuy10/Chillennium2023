@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://assets/Objects/DistressPlatform.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Objects/Player.tscn" type="PackedScene" id=2]
@@ -23,6 +23,8 @@
 [ext_resource path="res://assets/Sprites/Backgrounds/level4/LEVEL_4.0-4.png" type="Texture" id=21]
 [ext_resource path="res://assets/Sprites/Backgrounds/level4/LEVEL_4.0-0.png" type="Texture" id=22]
 [ext_resource path="res://assets/Sprites/Backgrounds/level4/LEVEL_4.0-15.png" type="Texture" id=23]
+[ext_resource path="res://assets/Objects/HeartHandoff.tscn" type="PackedScene" id=24]
+[ext_resource path="res://assets/Objects/Exit.tscn" type="PackedScene" id=25]
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
@@ -45,21 +47,17 @@ _data = {
 [node name="Level4" type="Node2D"]
 script = ExtResource( 3 )
 
-[node name="Separator" parent="." instance=ExtResource( 6 )]
-position = Vector2( 620.606, 278.328 )
-scale = Vector2( 0.716146, 0.712963 )
-
 [node name="Background" parent="." instance=ExtResource( 4 )]
-position = Vector2( 639, 361 )
+position = Vector2( 640, 361 )
 frames = SubResource( 3 )
 frame = 7
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1058, 482 )
+position = Vector2( 1058, 319 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Player2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 101, 65 )
+position = Vector2( 45, 126 )
 scale = Vector2( 0.5, 0.5 )
 isPlayer2 = true
 
@@ -75,15 +73,15 @@ enableEmotion = true
 impartDistress = true
 
 [node name="WordPlatformInteractable4" parent="." instance=ExtResource( 5 )]
-position = Vector2( 468, 392 )
+position = Vector2( 515, 439 )
 textString = "continue."
 
 [node name="WordPlatformInteractable8" parent="." instance=ExtResource( 5 )]
-position = Vector2( 869, 261 )
+position = Vector2( 859, 294 )
 textString = "just makes"
 
 [node name="WordPlatformInteractable9" parent="." instance=ExtResource( 5 )]
-position = Vector2( 707, 467 )
+position = Vector2( 718, 488 )
 textString = "me so"
 
 [node name="WordPlatformInteractable10" parent="." instance=ExtResource( 5 )]
@@ -91,26 +89,26 @@ position = Vector2( 665, 46 )
 textString = "I just want to"
 
 [node name="WordPlatformInteractable11" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1012, 631 )
+position = Vector2( 1055, 608 )
 textString = "frustrated"
 enableEmotion = true
 impartAnger = true
 
 [node name="WordPlatformInteractable13" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1070, 164 )
+position = Vector2( 1021, 232 )
 textString = "But it"
 
 [node name="PushableWord3" parent="." instance=ExtResource( 7 )]
-position = Vector2( 196, 148 )
+position = Vector2( 222, 90 )
 textString = "really really hurts and"
 
 [node name="WordPlatformInteractable14" parent="." instance=ExtResource( 5 )]
-position = Vector2( 665, 153 )
+position = Vector2( 670, 146 )
 rotation = 0.00109646
 textString = "what happened"
 
 [node name="WordPlatformInteractable15" parent="." instance=ExtResource( 5 )]
-position = Vector2( 21, 503 )
+position = Vector2( 26, 498 )
 textString = "It shouldn't have"
 
 [node name="DistressPlatform" parent="." instance=ExtResource( 1 )]
@@ -134,15 +132,25 @@ curve = SubResource( 2 )
 position = Vector2( 71.2343, -19 )
 
 [node name="WordPlatformInteractable16" parent="." instance=ExtResource( 5 )]
-position = Vector2( 827, 105 )
+position = Vector2( 881, 124 )
 textString = "forget"
 enableEmotion = true
 impartAnger = true
 
 [node name="WordPlatformInteractable2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 577, 239 )
+position = Vector2( 596, 323 )
 rotation = 0.00109646
 textString = "go."
+
+[node name="Separator2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 646, 514 )
+rotation = 0.00109646
+
+[node name="HeartHandoff" parent="." instance=ExtResource( 24 )]
+position = Vector2( 639, 269 )
+
+[node name="Exit" parent="HeartHandoff" instance=ExtResource( 25 )]
+position = Vector2( 632, 380 )
 
 [editable path="DistressPlatform"]
 [editable path="DistressPlatform/Path2D/PathFollow2D/WordPlatformInteractable"]

@@ -106,7 +106,8 @@ func _physics_process(delta):
 				if playSound:
 					get_parent().get_parent().get_node("AudioStreamPlayer").play(false)	
 					get_parent().get_parent().get_node("AudioStreamPlayer")
-					
+				if root.giveTutorialText:
+					body.get_parent().get_node("TutorialText/RichTextLabel").text = root.tutorialText
 					
 			pressed = true
 	

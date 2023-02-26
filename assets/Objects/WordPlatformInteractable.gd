@@ -6,6 +6,9 @@ export var textString = "Text!"
 export var onlyVisibleInContempt = false
 export var fallThoughInGuilt = false
 export var showImpartColor = true
+export var giveTutorialText = false
+export var tutorialText = "WASD to move"
+
 
 export var enableEmotion = false
 export var impartHappiness = false

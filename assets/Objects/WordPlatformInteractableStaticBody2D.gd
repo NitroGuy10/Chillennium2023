@@ -54,7 +54,7 @@ func set_text_collision():
 	textBounds = richTextLabel.get_font("normal_font").get_string_size(richTextLabel.text) / 2
 	$CollisionShape2D.scale.x = textBounds.x
 	$CollisionShape2D.scale.y = 5
-	$CollisionShape2D.position = Vector2(textBounds.x, textBounds.y - 40)
+	$CollisionShape2D.position = Vector2(textBounds.x, textBounds.y - 20)
 	get_parent().get_node("StaticBody2D/CollisionShape2D").scale.x = textBounds.x
 	get_parent().get_node("StaticBody2D/CollisionShape2D").scale.y = 8
 	get_parent().get_node("StaticBody2D/CollisionShape2D").position.x = textBounds.x

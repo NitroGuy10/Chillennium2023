@@ -24,7 +24,8 @@ func _ready():
 	
 	$BreakTimer.wait_time = timeToBreak
 	$WordPlatformInteractable.textString = textString
-	richTextLabel.text = textString
+	$WordPlatformInteractable/CollisionStuff/Area2D.set_text_collision()	
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -32,6 +32,7 @@ func _process(delta):
 	$DisgustParticles.emitting = player_vars.currentEmotion == "disgust"
 	$ContemptParticles.emitting = player_vars.currentEmotion == "contempt"
 	$GuiltParticles.emitting = player_vars.currentEmotion == "guilt"
+	$DistressParticles.emitting = player_vars.currentEmotion == "distress"	
 	$DashParticles.emitting = player_vars.currentEmotion == "fear" and canDash
 		
 
@@ -79,7 +80,7 @@ func _physics_process(delta):
 			velocity.y = 0
 	else:
 		velocity.y += gravityscale * delta
-		if canDash and is_pressed_for_me("dash"):
+		if canDash and player_vars.currentEmotion == "fear" and is_pressed_for_me("dash"):
 			canDash = false
 			if is_pressed_for_me("ui_up"):
 				velocity.y = -dashvelocity

@@ -39,7 +39,14 @@ script = ExtResource( 9 )
 [node name="Background" parent="." instance=ExtResource( 10 )]
 position = Vector2( 640, 361 )
 frames = SubResource( 3 )
-frame = 9
+frame = 14
+
+[node name="HeartHandoff" parent="." instance=ExtResource( 3 )]
+position = Vector2( 652, 579 )
+scale = Vector2( 0.75, 0.75 )
+
+[node name="Exit" parent="HeartHandoff" instance=ExtResource( 7 )]
+position = Vector2( 652, 299 )
 
 [node name="Player" parent="." instance=ExtResource( 8 )]
 position = Vector2( 1221, 180 )
@@ -104,12 +111,6 @@ textString = "I remember the"
 position = Vector2( 646, 514 )
 rotation = 0.00109646
 
-[node name="HeartHandoff" parent="." instance=ExtResource( 3 )]
-position = Vector2( 652, 579 )
-
-[node name="Exit" parent="HeartHandoff" instance=ExtResource( 7 )]
-position = Vector2( 652, 299 )
-
 [node name="WordPlatformInteractable17" parent="." instance=ExtResource( 11 )]
 position = Vector2( 485, 720 )
 textString = "and for what?"
@@ -164,5 +165,4 @@ textString = "makes me"
 [node name="WordPlatformBreak2" parent="." instance=ExtResource( 13 )]
 position = Vector2( 987, 269 )
 rotation = 0.00109646
-timeToBreak = 10
 textString = "Hearing you"

@@ -84,7 +84,11 @@ script = ExtResource( 2 )
 [node name="Background" parent="." instance=ExtResource( 1 )]
 position = Vector2( 635, 353 )
 frames = SubResource( 1 )
-frame = 51
+frame = 35
+
+[node name="HeartHandoff" parent="." instance=ExtResource( 130 )]
+position = Vector2( 617, 159 )
+scale = Vector2( 0.5, 0.5 )
 
 [node name="Separator" parent="." instance=ExtResource( 5 )]
 position = Vector2( 616.606, 270.328 )
@@ -154,10 +158,6 @@ textString = "I didn't have to"
 [node name="WordPlatformInteractable13" parent="." instance=ExtResource( 3 )]
 position = Vector2( 644, 196 )
 textString = "Yeah, I remember"
-
-[node name="HeartHandoff" parent="." instance=ExtResource( 130 )]
-position = Vector2( 617, 159 )
-scale = Vector2( 0.5, 0.5 )
 
 [node name="Exit" parent="." instance=ExtResource( 131 )]
 position = Vector2( 1212, 740 )

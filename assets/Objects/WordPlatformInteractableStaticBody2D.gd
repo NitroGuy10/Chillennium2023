@@ -8,7 +8,6 @@ onready var player_vars = get_node("/root/PlayerVariables")
 
 
 
-var playSound = false
 var textColor = Color(1, 1, 1)
 var TEXT_COLORS = {
 	"none": Color(1, 1, 1),
@@ -35,7 +34,6 @@ var richTextLabel
 func _ready():
 	root = get_parent().get_parent()
 	
-	playSound = root.playSound
 #	textColor = root.textColor
 	textColor = TEXT_COLORS[root.get_emotion()]
 	
@@ -103,9 +101,9 @@ func _physics_process(delta):
 			if previous_pressed_status == false:
 				if root.enableEmotion:
 					player_vars.currentEmotion = root.get_emotion()
-				if playSound:
-					get_parent().get_parent().get_node("AudioStreamPlayer").play(false)	
-					get_parent().get_parent().get_node("AudioStreamPlayer")
+					get_parent().get_parent().get_node("AudioStreamPlayer").play()
+				else:
+					get_parent().get_parent().get_node("AudioStreamPlayerNormal").play()					
 				if root.giveTutorialText:
 					body.get_parent().get_node("TutorialText/RichTextLabel").text = root.tutorialText
 					

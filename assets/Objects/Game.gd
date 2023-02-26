@@ -51,6 +51,8 @@ func _on_death(win = false):
 	if not transitioning:
 		if win:
 			levelNum += 1
+			$AudioStreamPlayerWin.play()
+		
 		transitioning = true
 		player_vars.exitOpen = false
 		add_child(transition.instance())

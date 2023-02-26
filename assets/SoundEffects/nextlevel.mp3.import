@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/nextlevel.mp3-44a1105f66d960f0b4d5cf7d0996964f.mp3str"
+
+[deps]
+
+source_file="res://assets/SoundEffects/nextlevel.mp3"
+dest_files=[ "res://.import/nextlevel.mp3-44a1105f66d960f0b4d5cf7d0996964f.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

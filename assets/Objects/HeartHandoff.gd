@@ -31,6 +31,7 @@ func _physics_process(delta):
 			num_players += 1
 	
 	if num_players >= 2:
+		$AudioStreamPlayer.play()
 		for body in $Area2D.get_overlapping_bodies():
 			if body.get_parent().name == "Player2":
 				body.get_parent().get_node("Heart").visible = false

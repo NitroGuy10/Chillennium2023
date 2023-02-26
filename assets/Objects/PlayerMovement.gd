@@ -111,6 +111,7 @@ func _physics_process(delta):
 		if player_vars.currentEmotion == "hope":
 			canDoubleJump = true
 		if is_pressed_for_me("ui_up"):
+			get_parent().get_node("JumpSFX").play()			
 			if player_vars.currentEmotion == "happiness":
 				velocity.y = -happyJumpVelocity
 			elif player_vars.currentEmotion == "peace":
@@ -126,17 +127,23 @@ func _physics_process(delta):
 			canDash = false
 			if is_pressed_for_me("ui_up"):
 				velocity.y = -dashvelocity
+				get_parent().get_node("JumpSFX").play()
 			elif is_pressed_for_me("ui_down"):
 				velocity.y = dashvelocity
+				get_parent().get_node("JumpSFX").play()				
 			if is_pressed_for_me("ui_left"):
 				velocity.x = -dashvelocity * dashHorizScalar
+				get_parent().get_node("JumpSFX").play()				
 			elif is_pressed_for_me("ui_right"):
 				velocity.x = dashvelocity * dashHorizScalar
+				get_parent().get_node("JumpSFX").play()				
 			else:
 				canDash = true
 		elif canDoubleJump and player_vars.currentEmotion == "hope" and is_just_pressed_for_me("ui_up"):
 			canDoubleJump = false
 			velocity.y = -jumpvelocity
+			get_parent().get_node("JumpSFX").play()
+			
 			
 	
 	if player_vars.currentEmotion == "peace":

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/heart.mp3-a95c49421bed81a30887bcfdb557a74c.mp3str"
+
+[deps]
+
+source_file="res://assets/SoundEffects/heart.mp3"
+dest_files=[ "res://.import/heart.mp3-a95c49421bed81a30887bcfdb557a74c.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

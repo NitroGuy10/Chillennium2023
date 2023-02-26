@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://assets/Objects/HeartHandoff.gd" type="Script" id=1]
 [ext_resource path="res://assets/Sprites/Things/handoff/connecting_heart.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://assets/Sprites/Things/handoff/heart_fillingup/heart_fillingup-3.png" type="Texture" id=8]
 [ext_resource path="res://assets/Sprites/Things/handoff/heart_fillingup/heart_fillingup-7.png" type="Texture" id=9]
 [ext_resource path="res://assets/Sprites/Things/handoff/heart_fillingup/heart_fillingup-8.png" type="Texture" id=10]
+[ext_resource path="res://assets/SoundEffects/heart.mp3" type="AudioStream" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -49,3 +50,6 @@ frames = SubResource( 3 )
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="Sprites"]
 frames = SubResource( 2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )

@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/Objects/WordPlatformInteractableStaticBody2D.gd" type="Script" id=1]
 [ext_resource path="res://assets/Objects/WordPlatformText.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/SoundEffects/piano_a.mp3" type="AudioStream" id=3]
+[ext_resource path="res://assets/SoundEffects/land.mp3" type="AudioStream" id=3]
 [ext_resource path="res://assets/Objects/WordPlatformInteractable.gd" type="Script" id=4]
+[ext_resource path="res://assets/SoundEffects/pop.mp3" type="AudioStream" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1, 1 )
@@ -50,5 +51,8 @@ shape = SubResource( 2 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
+
+[node name="AudioStreamPlayerNormal" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
 
 [editable path="WordPlatformText"]

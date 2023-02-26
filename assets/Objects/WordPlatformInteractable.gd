@@ -23,7 +23,7 @@ export var impartHope = false
 
 
 
-export var playSound = false
+var playSound = enableEmotion
 #export var textColor = Color(1, 1, 1)
 
 

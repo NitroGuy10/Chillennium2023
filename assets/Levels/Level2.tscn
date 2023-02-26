@@ -84,7 +84,7 @@ script = ExtResource( 2 )
 [node name="Background" parent="." instance=ExtResource( 1 )]
 position = Vector2( 635, 353 )
 frames = SubResource( 1 )
-frame = 46
+frame = 31
 
 [node name="HeartHandoff" parent="." instance=ExtResource( 130 )]
 position = Vector2( 617, 159 )
@@ -95,7 +95,7 @@ position = Vector2( 616.606, 270.328 )
 scale = Vector2( 0.716146, 0.712963 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1079, 126 )
+position = Vector2( 887, 363 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Player2" parent="." instance=ExtResource( 4 )]
@@ -106,12 +106,14 @@ isPlayer2 = true
 [node name="WordPlatformInteractable" parent="." instance=ExtResource( 3 )]
 position = Vector2( 9, 638 )
 textString = "Remember"
+giveTutorialText = true
+tutorialText = ""
 
 [node name="WordPlatformInteractable2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 10, 256 )
 textString = "fun"
 giveTutorialText = true
-tutorialText = "When excited, double jump (space & up arrow)!"
+tutorialText = "When excited, double jump ('w' & 'up arrow')!"
 enableEmotion = true
 impartHope = true
 
@@ -122,14 +124,20 @@ textString = "before?"
 [node name="WordPlatformInteractable4" parent="." instance=ExtResource( 3 )]
 position = Vector2( 407, 450 )
 textString = "the"
+giveTutorialText = true
+tutorialText = ""
 
 [node name="WordPlatformInteractable5" parent="." instance=ExtResource( 3 )]
 position = Vector2( 252, 142 )
 textString = "we used to have"
+giveTutorialText = true
+tutorialText = ""
 
 [node name="WordPlatformInteractable6" parent="." instance=ExtResource( 3 )]
 position = Vector2( 154, 611 )
 textString = "all"
+giveTutorialText = true
+tutorialText = ""
 
 [node name="WordPlatformInteractable7" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1083, 306 )
@@ -150,6 +158,8 @@ textString = "its..."
 [node name="WordPlatformInteractable10" parent="." instance=ExtResource( 3 )]
 position = Vector2( 829, 497 )
 textString = "with things I wish"
+giveTutorialText = true
+tutorialText = ""
 
 [node name="WordPlatformInteractable11" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1049, 645 )
@@ -162,6 +172,8 @@ textString = "I didn't have to"
 [node name="WordPlatformInteractable13" parent="." instance=ExtResource( 3 )]
 position = Vector2( 644, 196 )
 textString = "Yeah, I remember"
+giveTutorialText = true
+tutorialText = ""
 
 [node name="Exit" parent="." instance=ExtResource( 131 )]
 position = Vector2( 1212, 740 )

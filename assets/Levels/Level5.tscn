@@ -27,6 +27,7 @@ script = ExtResource( 9 )
 [node name="Background" parent="." instance=ExtResource( 10 )]
 position = Vector2( 640, 361 )
 frames = SubResource( 1 )
+frame = 1
 
 [node name="Exit" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1141, 803.25 )
@@ -37,7 +38,7 @@ position = Vector2( 652, 579 )
 scale = Vector2( 0.75, 0.75 )
 
 [node name="Player" parent="." instance=ExtResource( 8 )]
-position = Vector2( 1221, 180 )
+position = Vector2( 904, 2 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Player2" parent="." instance=ExtResource( 8 )]
@@ -46,63 +47,62 @@ scale = Vector2( 0.5, 0.5 )
 isPlayer2 = true
 
 [node name="WordPlatformInteractable" parent="." instance=ExtResource( 11 )]
-position = Vector2( 12, 397 )
+position = Vector2( 11, 361 )
 textString = "Whenever"
 
 [node name="WordPlatformInteractable3" parent="." instance=ExtResource( 11 )]
-position = Vector2( 109, 243 )
+position = Vector2( 248, 267 )
 textString = "about the"
 fallThoughInGuilt = true
-enableEmotion = true
-impartDistress = true
 
 [node name="WordPlatformInteractable4" parent="." instance=ExtResource( 11 )]
-position = Vector2( 112, 167 )
+position = Vector2( 319, 191 )
 textString = "good,"
 
 [node name="WordPlatformInteractable8" parent="." instance=ExtResource( 11 )]
-position = Vector2( 483, 594 )
-textString = "all I can remember is"
+position = Vector2( 500, 465 )
+textString = "all I can remember"
 onlyVisibleInContempt = true
 
 [node name="WordPlatformInteractable9" parent="." instance=ExtResource( 11 )]
-position = Vector2( 264, 601 )
+position = Vector2( 500, 276 )
 textString = "and"
+onlyVisibleInContempt = true
 
 [node name="WordPlatformInteractable10" parent="." instance=ExtResource( 11 )]
-position = Vector2( 484, 664 )
-textString = "that cesspool of negativity"
+position = Vector2( 500, 541 )
+textString = "is that negativity."
 onlyVisibleInContempt = true
 
 [node name="WordPlatformInteractable11" parent="." instance=ExtResource( 11 )]
-position = Vector2( 479, 512 )
+position = Vector2( 499, 385 )
 textString = "i hate it."
 onlyVisibleInContempt = true
 
 [node name="WordPlatformInteractable14" parent="." instance=ExtResource( 11 )]
-position = Vector2( 322, 493 )
+position = Vector2( 283, 581 )
 rotation = 0.00109646
-textString = "bad"
+textString = "the bad"
 giveTutorialText = true
 tutorialText = "Contempt can both blind and illuminate your way!"
 enableEmotion = true
 impartContempt = true
 
 [node name="WordPlatformInteractable15" parent="." instance=ExtResource( 11 )]
-position = Vector2( 112, 319 )
+position = Vector2( 164, 329 )
 textString = "I think"
 
 [node name="WordPlatformInteractable2" parent="." instance=ExtResource( 11 )]
-position = Vector2( 11, 502 )
+position = Vector2( 106, 580 )
 rotation = 0.00109646
-textString = "I remember the"
+textString = "I remember"
 
 [node name="Separator2" parent="." instance=ExtResource( 12 )]
 position = Vector2( 646, 514 )
 rotation = 0.00109646
 
 [node name="WordPlatformInteractable17" parent="." instance=ExtResource( 11 )]
-position = Vector2( 485, 720 )
+position = Vector2( 502, 786 )
 textString = "and for what?"
 
 [node name="WordPlatformInteractable5" parent="." instance=ExtResource( 11 )]
@@ -130,13 +130,8 @@ position = Vector2( 853, 87 )
 rotation = 0.00109646
 textString = "Just remember all the"
 
-[node name="WordPlatformInteractable20" parent="." instance=ExtResource( 11 )]
-position = Vector2( 985, 379 )
-rotation = 0.00109646
-textString = "say those things"
-
 [node name="WordPlatformInteractable22" parent="." instance=ExtResource( 11 )]
-position = Vector2( 909, 631 )
+position = Vector2( 915, 651 )
 rotation = 0.00109646
 textString = "uncomfortable."
 giveTutorialText = true
@@ -150,7 +145,7 @@ rotation = 0.00109646
 textString = "good fun we had."
 
 [node name="WordPlatformBreak" parent="." instance=ExtResource( 13 )]
-position = Vector2( 989, 497 )
+position = Vector2( 986, 491 )
 rotation = 0.00109646
 textString = "makes me"
 
@@ -158,3 +153,13 @@ textString = "makes me"
 position = Vector2( 987, 269 )
 rotation = 0.00109646
 textString = "Hearing you"
+
+[node name="WordPlatformBreak3" parent="." instance=ExtResource( 13 )]
+position = Vector2( 987, 381 )
+rotation = 0.00109646
+textString = "say those things"
+
+[node name="WordPlatformInteractable13" parent="." instance=ExtResource( 11 )]
+position = Vector2( 871, 606 )
+rotation = 0.00109646
+textString = "be"

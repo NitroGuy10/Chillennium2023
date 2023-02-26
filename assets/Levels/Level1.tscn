@@ -42,17 +42,19 @@ textString = "It's like"
 position = Vector2( 541, 653 )
 textString = "still"
 giveTutorialText = true
-tutorialText = "Peacefull times can feel like slow-mo!"
+tutorialText = "Peaceful times can feel like slow-mo!"
 enableEmotion = true
 impartPeace = true
 
 [node name="WordPlatformInteractable4" parent="." instance=ExtResource( 3 )]
 position = Vector2( 87, 200 )
-textString = "brings so many memories"
+textString = "brings back so many memories"
 
 [node name="WordPlatformInteractable5" parent="." instance=ExtResource( 3 )]
 position = Vector2( 402, 578 )
 textString = "stood"
+giveTutorialText = true
+tutorialText = ""
 
 [node name="Exit" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1219, 700 )
@@ -65,17 +67,19 @@ textString = "time"
 position = Vector2( 1036, 326 )
 textString = "back then!"
 giveTutorialText = true
-tutorialText = "Jump high for joy (space)!"
+tutorialText = "Jump high for joy ('w' or 'up arrow')!"
 enableEmotion = true
 impartHappiness = true
 
 [node name="WordPlatformInteractable8" parent="." instance=ExtResource( 3 )]
-position = Vector2( 726, 515 )
-textString = "It's like if"
+position = Vector2( 726, 549 )
+textString = "It's as if"
 
 [node name="WordPlatformInteractable9" parent="." instance=ExtResource( 3 )]
-position = Vector2( 878, 412 )
+position = Vector2( 847, 460 )
 textString = "we were"
+giveTutorialText = true
+tutorialText = ""
 
 [node name="WordPlatformInteractable10" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1041, 519 )

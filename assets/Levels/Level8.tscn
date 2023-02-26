@@ -35,7 +35,6 @@ script = ExtResource( 2 )
 [node name="Background" parent="." instance=ExtResource( 8 )]
 position = Vector2( 640, 361 )
 frames = SubResource( 1 )
-frame = 9
 
 [node name="Exit" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1330, 73.0001 )
@@ -67,20 +66,20 @@ rotation = 0.00109646
 textString = "Yeah?"
 
 [node name="WordPlatformInteractable6" parent="." instance=ExtResource( 1 )]
-position = Vector2( 813, 247 )
+position = Vector2( 691, 123 )
 rotation = 0.00109646
-textString = "decision I would make"
+textString = "decision I would make."
 fallThoughInGuilt = true
 
 [node name="WordPlatformInteractable18" parent="." instance=ExtResource( 1 )]
-position = Vector2( 683, 179 )
+position = Vector2( 701, 327 )
 rotation = 0.00109646
-textString = "I know only one"
+textString = "I know there's only one"
 enableEmotion = true
 impartGuilt = true
 
 [node name="WordPlatformInteractable20" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1038, 483 )
+position = Vector2( 1050, 434 )
 rotation = 0.00109646
 textString = "changed?"
 enableEmotion = true
@@ -94,7 +93,7 @@ fallThoughInGuilt = true
 
 [node name="WordPlatformInteractable19" parent="." instance=ExtResource( 1 )]
 position = Vector2( 315, 224 )
-textString = "go back."
+textString = "go back"
 fallThoughInGuilt = true
 enableEmotion = true
 impartGuilt = true
@@ -115,7 +114,11 @@ textString = "I know it hurts..."
 fallThoughInGuilt = true
 
 [node name="WordPlatformInteractable27" parent="." instance=ExtResource( 1 )]
-position = Vector2( 924, 544 )
+position = Vector2( 925, 506 )
 rotation = 0.00109646
 textString = "you have"
-fallThoughInGuilt = true
+
+[node name="WordPlatformInteractable7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 798, 223 )
+rotation = 0.00109646
+textString = "difference in"

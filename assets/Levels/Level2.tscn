@@ -11,7 +11,7 @@ script = ExtResource( 2 )
 
 [node name="Background" parent="." instance=ExtResource( 1 )]
 position = Vector2( 635, 353 )
-frame = 7
+frame = 11
 
 [node name="Separator" parent="Background" instance=ExtResource( 5 )]
 position = Vector2( -25.6843, -115.955 )
@@ -32,6 +32,8 @@ textString = "Remember"
 [node name="WordPlatformInteractable2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 10, 256 )
 textString = "fun"
+enableEmotion = true
+impartHope = true
 
 [node name="WordPlatformInteractable3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 499, 195 )

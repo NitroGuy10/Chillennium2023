@@ -1,0 +1,126 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/Objects/DistressPlatform.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/Objects/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/Levels/LevelController.gd" type="Script" id=3]
+[ext_resource path="res://assets/Objects/Background.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/Objects/WordPlatformInteractable.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/Objects/Separator.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/Objects/PushableWord.tscn" type="PackedScene" id=7]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 101.333, -19, 0, 0, 0, 0, 101.333, -19, 0, 0, 0, 0, 355.168, -345 )
+}
+
+[sub_resource type="Curve2D" id=2]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 71.2343, -19, 0, 0, 0, 0, 272.898, -486, 0, 0, 0, 0, 272.898, -492 )
+}
+
+[node name="Level2" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Background" parent="." instance=ExtResource( 4 )]
+position = Vector2( 639, 361 )
+frame = 26
+
+[node name="Separator" parent="Background" instance=ExtResource( 6 )]
+position = Vector2( -25.6843, -115.955 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1058, 482 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Player2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 101, 65 )
+scale = Vector2( 0.5, 0.5 )
+isPlayer2 = true
+
+[node name="WordPlatformInteractable" parent="." instance=ExtResource( 5 )]
+position = Vector2( 9, 284 )
+textString = "We can't let those memories"
+
+[node name="WordPlatformInteractable3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 477, 643 )
+textString = "us"
+fallThoughInGuilt = true
+enableEmotion = true
+impartDistress = true
+
+[node name="WordPlatformInteractable4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 468, 392 )
+textString = "continue."
+
+[node name="WordPlatformInteractable8" parent="." instance=ExtResource( 5 )]
+position = Vector2( 869, 261 )
+textString = "just makes"
+
+[node name="WordPlatformInteractable9" parent="." instance=ExtResource( 5 )]
+position = Vector2( 707, 467 )
+textString = "me so"
+
+[node name="WordPlatformInteractable10" parent="." instance=ExtResource( 5 )]
+position = Vector2( 665, 46 )
+textString = "I just want to"
+
+[node name="WordPlatformInteractable11" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1012, 631 )
+textString = "frustrated"
+enableEmotion = true
+impartAnger = true
+
+[node name="WordPlatformInteractable13" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1070, 164 )
+textString = "But it"
+
+[node name="PushableWord3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 196, 148 )
+textString = "really really hurts and"
+
+[node name="WordPlatformInteractable14" parent="." instance=ExtResource( 5 )]
+position = Vector2( 665, 153 )
+rotation = 0.00109646
+textString = "what happened"
+
+[node name="WordPlatformInteractable15" parent="." instance=ExtResource( 5 )]
+position = Vector2( 21, 503 )
+textString = "It shouldn't have"
+
+[node name="DistressPlatform" parent="." instance=ExtResource( 1 )]
+position = Vector2( 920, 581 )
+textString = "unbelievebly"
+
+[node name="Path2D" parent="DistressPlatform" index="0"]
+curve = SubResource( 1 )
+
+[node name="PathFollow2D" parent="DistressPlatform/Path2D" index="0"]
+position = Vector2( 101.333, -19 )
+
+[node name="DistressPlatform2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 286, 644 )
+textString = "a hold on"
+
+[node name="Path2D" parent="DistressPlatform2" index="0"]
+curve = SubResource( 2 )
+
+[node name="PathFollow2D" parent="DistressPlatform2/Path2D" index="0"]
+position = Vector2( 71.2343, -19 )
+
+[node name="WordPlatformInteractable16" parent="." instance=ExtResource( 5 )]
+position = Vector2( 827, 105 )
+textString = "forget"
+enableEmotion = true
+impartAnger = true
+
+[node name="WordPlatformInteractable2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 577, 239 )
+rotation = 0.00109646
+textString = "go."
+
+[editable path="DistressPlatform"]
+[editable path="DistressPlatform/Path2D/PathFollow2D/WordPlatformInteractable"]
+[editable path="DistressPlatform/Path2D/PathFollow2D/WordPlatformInteractable/WordPlatformText"]
+[editable path="DistressPlatform2"]
+[editable path="DistressPlatform2/Path2D/PathFollow2D/WordPlatformInteractable"]
+[editable path="DistressPlatform2/Path2D/PathFollow2D/WordPlatformInteractable/WordPlatformText"]

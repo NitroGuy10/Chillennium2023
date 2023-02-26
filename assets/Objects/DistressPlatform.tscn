@@ -5,7 +5,7 @@
 
 [sub_resource type="Curve2D" id=1]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 74.0066, -1, 0, 0, 0, 0, 121.399, -74, 0, 0, 0, 0, 144.475, -184, 0, 0, 0, 0, 140.462, -237, 0, 0, 0, 0, 249.822, -540 )
+"points": PoolVector2Array( 0, 0, 0, 0, 74.0066, -1 )
 }
 
 [node name="DistressPlatform" type="Node2D"]

@@ -50,13 +50,15 @@ script = ExtResource( 3 )
 [node name="Background" parent="." instance=ExtResource( 4 )]
 position = Vector2( 640, 361 )
 frames = SubResource( 3 )
+frame = 12
+
+[node name="Exit" parent="." instance=ExtResource( 25 )]
+position = Vector2( 955, 459 )
+scale = Vector2( 0.192134, 0.341264 )
 
 [node name="HeartHandoff" parent="." instance=ExtResource( 24 )]
 position = Vector2( 639, 269 )
 scale = Vector2( 0.5, 0.5 )
-
-[node name="Exit" parent="HeartHandoff" instance=ExtResource( 25 )]
-position = Vector2( 632, 380 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1058, 319 )
@@ -109,7 +111,7 @@ position = Vector2( 222, 90 )
 textString = "really really hurts and"
 
 [node name="WordPlatformInteractable14" parent="." instance=ExtResource( 5 )]
-position = Vector2( 670, 146 )
+position = Vector2( 659, 192 )
 rotation = 0.00109646
 textString = "what happened"
 
@@ -138,7 +140,7 @@ curve = SubResource( 2 )
 position = Vector2( 71.2343, -19 )
 
 [node name="WordPlatformInteractable16" parent="." instance=ExtResource( 5 )]
-position = Vector2( 881, 124 )
+position = Vector2( 834, 151 )
 textString = "forget"
 giveTutorialText = true
 tutorialText = "Anger allows you to push/throw some words!"
@@ -151,8 +153,14 @@ rotation = 0.00109646
 textString = "go."
 
 [node name="Separator2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 646, 514 )
+position = Vector2( 641, 589 )
 rotation = 0.00109646
+scale = Vector2( 1, -0.0799551 )
+
+[node name="Separator3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 642, -82 )
+rotation = 0.00109646
+scale = Vector2( 1, -0.0799551 )
 
 [editable path="DistressPlatform"]
 [editable path="DistressPlatform/Path2D/PathFollow2D/WordPlatformInteractable"]

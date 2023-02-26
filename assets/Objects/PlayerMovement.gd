@@ -53,13 +53,13 @@ func _process(delta):
 	
 	if velocity.x > 0:
 		$AnimatedSprite.scale.x = -0.5
-		if player_vars.currentEmotion == "happiness":
+		if player_vars.currentEmotion == "happiness" || player_vars.currentEmotion == "hope":
 			$AnimatedSprite.position.x = 117
 		else:
 			$AnimatedSprite.position.x = 56
 	else:
 		$AnimatedSprite.scale.x = 0.5
-		if player_vars.currentEmotion == "happiness":
+		if player_vars.currentEmotion == "happiness" || player_vars.currentEmotion == "hope":
 			$AnimatedSprite.position.x = -122		
 		else:		
 			$AnimatedSprite.position.x = -64

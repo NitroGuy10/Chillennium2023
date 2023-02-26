@@ -1,11 +1,10 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://assets/Sprites/Backgrounds/level4/LEVEL_4.0-0.png" type="Texture" id=1]
-[ext_resource path="res://assets/Sprites/Backgrounds/level4/LEVEL_4.0-2.png" type="Texture" id=2]
+[ext_resource path="res://assets/Sprites/Backgrounds/level5/LEVEL_5.0-3.png" type="Texture" id=1]
+[ext_resource path="res://assets/Sprites/Backgrounds/level5/LEVEL_5.0-2.png" type="Texture" id=2]
 [ext_resource path="res://assets/Objects/HeartHandoff.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/Sprites/Backgrounds/level4/LEVEL_4.0-4.png" type="Texture" id=4]
-[ext_resource path="res://assets/Sprites/Backgrounds/level4/LEVEL_4.0-8.png" type="Texture" id=5]
-[ext_resource path="res://assets/Sprites/Backgrounds/level4/LEVEL_4.0-15.png" type="Texture" id=6]
+[ext_resource path="res://assets/Sprites/Backgrounds/level5/LEVEL_5.0-0.png" type="Texture" id=4]
+[ext_resource path="res://assets/Sprites/Backgrounds/level5/LEVEL_5.0-1.png" type="Texture" id=5]
 [ext_resource path="res://assets/Objects/Exit.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/Objects/Player.tscn" type="PackedScene" id=8]
 [ext_resource path="res://assets/Levels/LevelController.gd" type="Script" id=9]
@@ -13,21 +12,10 @@
 [ext_resource path="res://assets/Objects/WordPlatformInteractable.tscn" type="PackedScene" id=11]
 [ext_resource path="res://assets/Objects/Separator.tscn" type="PackedScene" id=12]
 [ext_resource path="res://assets/Objects/WordPlatformBreak.tscn" type="PackedScene" id=13]
-[ext_resource path="res://assets/Sprites/Backgrounds/level4/LEVEL_4.0-7.png" type="Texture" id=15]
-[ext_resource path="res://assets/Sprites/Backgrounds/level4/LEVEL_4.0-9.png" type="Texture" id=16]
-[ext_resource path="res://assets/Sprites/Backgrounds/level4/LEVEL_4.0-10.png" type="Texture" id=17]
-[ext_resource path="res://assets/Sprites/Backgrounds/level4/LEVEL_4.0-13.png" type="Texture" id=18]
-[ext_resource path="res://assets/Sprites/Backgrounds/level4/LEVEL_4.0-14.png" type="Texture" id=19]
-[ext_resource path="res://assets/Sprites/Backgrounds/level4/LEVEL_4.0-1.png" type="Texture" id=20]
-[ext_resource path="res://assets/Sprites/Backgrounds/level4/LEVEL_4.0-3.png" type="Texture" id=21]
-[ext_resource path="res://assets/Sprites/Backgrounds/level4/LEVEL_4.0-11.png" type="Texture" id=22]
-[ext_resource path="res://assets/Sprites/Backgrounds/level4/LEVEL_4.0-6.png" type="Texture" id=23]
-[ext_resource path="res://assets/Sprites/Backgrounds/level4/LEVEL_4.0-12.png" type="Texture" id=24]
-[ext_resource path="res://assets/Sprites/Backgrounds/level4/LEVEL_4.0-5.png" type="Texture" id=25]
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 20 ), ExtResource( 2 ), ExtResource( 21 ), ExtResource( 4 ), ExtResource( 25 ), ExtResource( 23 ), ExtResource( 15 ), ExtResource( 5 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 22 ), ExtResource( 24 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 6 ) ],
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 1 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -38,14 +26,15 @@ script = ExtResource( 9 )
 
 [node name="Background" parent="." instance=ExtResource( 10 )]
 position = Vector2( 640, 361 )
-frames = SubResource( 3 )
+frames = SubResource( 1 )
+
+[node name="Exit" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1141, 803.25 )
+scale = Vector2( 0.2882, 0.511897 )
 
 [node name="HeartHandoff" parent="." instance=ExtResource( 3 )]
 position = Vector2( 652, 579 )
 scale = Vector2( 0.75, 0.75 )
-
-[node name="Exit" parent="HeartHandoff" instance=ExtResource( 7 )]
-position = Vector2( 652, 299 )
 
 [node name="Player" parent="." instance=ExtResource( 8 )]
 position = Vector2( 1221, 180 )

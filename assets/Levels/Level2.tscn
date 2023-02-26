@@ -84,7 +84,7 @@ script = ExtResource( 2 )
 [node name="Background" parent="." instance=ExtResource( 1 )]
 position = Vector2( 635, 353 )
 frames = SubResource( 1 )
-frame = 43
+frame = 46
 
 [node name="HeartHandoff" parent="." instance=ExtResource( 130 )]
 position = Vector2( 617, 159 )

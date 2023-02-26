@@ -41,7 +41,8 @@ func _ready():
 	
 	# Set the CollisionShape2D sizes to that of the text
 	richTextLabel = root.get_node("WordPlatformText/RichTextLabel")
-	richTextLabel.set("custom_colors/default_color", textColor)
+	if root.showImpartColor:
+		richTextLabel.set("custom_colors/default_color", textColor)
 #	richTextLabel.add_color_override("font_color", textColor)
 	set_text_collision()
 	

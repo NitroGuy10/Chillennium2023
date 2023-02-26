@@ -5,6 +5,7 @@ export var textString = "Text!"
 
 export var onlyVisibleInContempt = false
 export var fallThoughInGuilt = false
+export var showImpartColor = true
 
 export var enableEmotion = false
 export var impartHappiness = false

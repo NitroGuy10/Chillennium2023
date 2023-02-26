@@ -49,12 +49,12 @@ textString = "brings so many memories"
 position = Vector2( 402, 578 )
 textString = "stood"
 
+[node name="Exit" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1219, 700 )
+
 [node name="WordPlatformInteractable6" parent="." instance=ExtResource( 3 )]
 position = Vector2( 276, 494 )
 textString = "time"
-
-[node name="Exit" parent="WordPlatformInteractable6" instance=ExtResource( 7 )]
-position = Vector2( 943, 206 )
 
 [node name="WordPlatformInteractable7" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1036, 326 )

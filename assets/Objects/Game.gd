@@ -8,10 +8,17 @@ onready var player_vars = get_node("/root/PlayerVariables")
 var transitioning = false
 
 var levels = [
-	preload("res://assets/Levels/Test_Level.tscn"),
+#	preload("res://assets/Levels/Test_Level.tscn"),
 	preload("res://assets/Levels/Level1.tscn"),
 	preload("res://assets/Levels/Level2.tscn"),
-	preload("res://assets/Levels/Level3.tscn")
+	preload("res://assets/Levels/Level3.tscn"),
+	preload("res://assets/Levels/Level4.tscn"),
+	preload("res://assets/Levels/Level5.tscn"),
+	preload("res://assets/Levels/Level6.tscn"),
+	preload("res://assets/Levels/Level7.tscn"),
+	preload("res://assets/Levels/Level8.tscn"),
+	preload("res://assets/Levels/Level9.tscn"),
+	preload("res://assets/Levels/TheEnd.tscn"),	
 ]
 
 var transition = preload("res://assets/Objects/ScreenTransition.tscn")

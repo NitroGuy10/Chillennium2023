@@ -39,14 +39,15 @@ script = ExtResource( 9 )
 [node name="Background" parent="." instance=ExtResource( 10 )]
 position = Vector2( 640, 361 )
 frames = SubResource( 3 )
-frame = 14
+frame = 1
+
+[node name="Exit" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1141, 803.25 )
+scale = Vector2( 0.2882, 0.511897 )
 
 [node name="HeartHandoff" parent="." instance=ExtResource( 3 )]
 position = Vector2( 652, 579 )
 scale = Vector2( 0.75, 0.75 )
-
-[node name="Exit" parent="HeartHandoff" instance=ExtResource( 7 )]
-position = Vector2( 652, 299 )
 
 [node name="Player" parent="." instance=ExtResource( 8 )]
 position = Vector2( 1221, 180 )

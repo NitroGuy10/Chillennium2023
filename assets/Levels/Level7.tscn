@@ -28,7 +28,6 @@ script = ExtResource( 2 )
 [node name="Background" parent="." instance=ExtResource( 8 )]
 position = Vector2( 640, 361 )
 frames = SubResource( 1 )
-frame = 4
 
 [node name="Exit" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1330, 73.0001 )
@@ -75,6 +74,8 @@ impartGuilt = true
 position = Vector2( 1124, 479 )
 rotation = 0.00109646
 textString = "right?"
+giveTutorialText = true
+tutorialText = "Remember your dash! (Space/Shift)"
 enableEmotion = true
 impartFear = true
 

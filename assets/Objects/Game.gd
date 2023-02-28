@@ -42,6 +42,7 @@ func reload_scene():
 		titleScreen = false
 	if levelNum == 9:
 		$AudioStreamPlayer.stop()
+		$EmotionFlyup.visible = false
 	
 	for i in range(0, $Level.get_child_count()):
 		$Level.get_child(i).queue_free()

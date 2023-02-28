@@ -34,5 +34,5 @@ func _process(delta):
 		$WordPlatformText/RichTextLabel.set("custom_colors/default_color", emotion.color)
 		lastEmotion = player_vars.currentEmotion
 		
-	$WordPlatformText/RichTextLabel.set("custom_colors/default_color", lerp($WordPlatformText/RichTextLabel.get("custom_colors/default_color"), Color(1, 1, 1, 0), 0.9 * delta))
+	$WordPlatformText/RichTextLabel.set("custom_colors/default_color", lerp($WordPlatformText/RichTextLabel.get("custom_colors/default_color"), Color(1, 1, 1, 0), 0.3 * delta))
 	

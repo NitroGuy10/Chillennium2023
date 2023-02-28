@@ -252,7 +252,7 @@ script = ExtResource( 63 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Heart"]
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 3 )
-frame = 54
+frame = 25
 playing = true
 
 [node name="PlayerKinematicBody2D" type="KinematicBody2D" parent="."]

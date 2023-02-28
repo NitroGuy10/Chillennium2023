@@ -18,17 +18,17 @@ var levels = [
 	preload("res://assets/Levels/Level7.tscn"),
 	preload("res://assets/Levels/Level8.tscn"),
 	preload("res://assets/Levels/Level9.tscn"),
-	preload("res://assets/Levels/TheEnd.tscn"),	
+	preload("res://assets/Levels/TheEnd.tscn")
 ]
 
 var transition = preload("res://assets/Objects/ScreenTransition.tscn")
 
-var levelNum = 0
+var levelNum = -1
+var titleScreen = true
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$AudioStreamPlayer.play()
 	pass # Replace with function body.
 
 
@@ -37,6 +37,9 @@ func _ready():
 #	pass
 
 func reload_scene():
+	if titleScreen:
+		$AudioStreamPlayer.play()
+		titleScreen = false
 	if levelNum == 9:
 		$AudioStreamPlayer.stop()
 	
@@ -56,5 +59,12 @@ func _on_death(win = false):
 		transitioning = true
 		player_vars.exitOpen = false
 		add_child(transition.instance())
-	
-	
+
+
+func _input(event):
+	if titleScreen and event is InputEventKey:
+		if event.pressed:
+			_on_death(true)
+
+func _on_Button_pressed():
+	_on_death(true)

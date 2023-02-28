@@ -12,14 +12,13 @@
 script = ExtResource( 2 )
 
 [node name="Background" parent="." instance=ExtResource( 1 )]
-frame = 0
 
 [node name="Separator" parent="." instance=ExtResource( 4 )]
 position = Vector2( 622.106, 276.328 )
 scale = Vector2( 0.716146, 0.712963 )
 
 [node name="HeartHandoff" parent="." instance=ExtResource( 6 )]
-position = Vector2( 604, 673 )
+position = Vector2( 621, 673 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
@@ -58,7 +57,7 @@ giveTutorialText = true
 tutorialText = ""
 
 [node name="Exit" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1219, 700 )
+position = Vector2( 1190, 698 )
 
 [node name="WordPlatformInteractable6" parent="." instance=ExtResource( 3 )]
 position = Vector2( 276, 494 )

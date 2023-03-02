@@ -33,7 +33,7 @@ animations = [ {
 position = Vector2( 640, 360 )
 scale = Vector2( 0.667, 0.667 )
 frames = SubResource( 1 )
-frame = 12
+frame = 14
 playing = true
 
 [node name="Button" type="Button" parent="."]

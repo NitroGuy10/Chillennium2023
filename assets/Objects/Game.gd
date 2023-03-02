@@ -22,9 +22,11 @@ var levels = [
 ]
 
 var transition = preload("res://assets/Objects/ScreenTransition.tscn")
+var chapterPopup = preload("res://assets/Objects/ChapterPopup.tscn")
 
 var levelNum = -1
 var titleScreen = true
+var newLevel = true
 
 
 # Called when the node enters the scene tree for the first time.
@@ -43,21 +45,41 @@ func reload_scene():
 	if levelNum == 9:
 		$AudioStreamPlayer.stop()
 		$EmotionFlyup.visible = false
+		for i in range(0, $Level.get_child_count()):
+			$Level.get_child(i).queue_free()
+		var levelInstance = levels[levelNum].instance()
+		$Level.add_child(levelInstance)
+	else:
+		if newLevel:
+			var chapterPopupInstance = chapterPopup.instance()
+			chapterPopupInstance.get_node("AnimatedSprite").animation = "ch" + String(levelNum + 1)
+			add_child(chapterPopupInstance)
+			move_child(chapterPopupInstance, 1)
+			$ChapterPopupTimer.start()
+		
+		for i in range(0, $Level.get_child_count()):
+			$Level.get_child(i).queue_free()
+		
+		if not newLevel:
+			var levelInstance = levels[levelNum].instance()
+			$Level.add_child(levelInstance)
+			$EmotionFlyup.visible = true
+			
+		else:
+			newLevel = false
 	
-	for i in range(0, $Level.get_child_count()):
-		$Level.get_child(i).queue_free()
 	
-	var levelInstance = levels[levelNum].instance()
-
-	$Level.add_child(levelInstance)
+	
 
 func _on_death(win = false):
 	if not transitioning:
 		if win:
 			levelNum += 1
 			$AudioStreamPlayerWin.play()
+			newLevel = true
 		
 		transitioning = true
+		$EmotionFlyup.visible = false
 		player_vars.exitOpen = false
 		add_child(transition.instance())
 
@@ -69,3 +91,8 @@ func _input(event):
 
 func _on_Button_pressed():
 	_on_death(true)
+
+
+func _on_ChapterPopupTimer_timeout():
+	var levelInstance = levels[levelNum].instance()
+	$Level.add_child(levelInstance)

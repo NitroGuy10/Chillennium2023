@@ -149,6 +149,7 @@ visible = false
 position = Vector2( 658, 356 )
 scale = Vector2( 0.7, 0.7 )
 frames = SubResource( 3 )
+frame = 21
 playing = true
 
 [node name="Sprite" type="Sprite" parent="AnimatedSprite2"]
@@ -160,7 +161,7 @@ wait_time = 19.0
 one_shot = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
-[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]
 [connection signal="timeout" from="Timer2" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]
 
 [editable path="WordPlatformText"]

@@ -1,7 +1,6 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://assets/Objects/HeartHandoff.gd" type="Script" id=1]
-[ext_resource path="res://assets/Sprites/Things/handoff/connecting_heart.png" type="Texture" id=2]
 [ext_resource path="res://assets/Sprites/Things/handoff/heart_fillingup/heart_fillingup-4.png" type="Texture" id=3]
 [ext_resource path="res://assets/Sprites/Things/handoff/heart_fillingup/heart_fillingup-6.png" type="Texture" id=4]
 [ext_resource path="res://assets/Sprites/Things/handoff/heart_fillingup/heart_fillingup-1.png" type="Texture" id=5]
@@ -11,6 +10,9 @@
 [ext_resource path="res://assets/Sprites/Things/handoff/heart_fillingup/heart_fillingup-7.png" type="Texture" id=9]
 [ext_resource path="res://assets/Sprites/Things/handoff/heart_fillingup/heart_fillingup-8.png" type="Texture" id=10]
 [ext_resource path="res://assets/SoundEffects/heart.mp3" type="AudioStream" id=11]
+[ext_resource path="res://assets/Sprites/Things/handoff/heart_halffull/heart_halffull1.png" type="Texture" id=12]
+[ext_resource path="res://assets/Sprites/Things/handoff/heart_halffull/heart_halffull3.png" type="Texture" id=13]
+[ext_resource path="res://assets/Sprites/Things/handoff/heart_halffull/heart_halffull2.png" type="Texture" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -24,9 +26,14 @@ animations = [ {
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
+"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 12 ) ],
 "loop": false,
 "name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 14 ), ExtResource( 13 ) ],
+"loop": false,
+"name": "halffull",
 "speed": 5.0
 } ]
 
@@ -50,6 +57,8 @@ frames = SubResource( 3 )
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="Sprites"]
 frames = SubResource( 2 )
+frame = 2
+playing = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )

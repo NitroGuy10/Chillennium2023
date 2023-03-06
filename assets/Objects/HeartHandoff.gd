@@ -30,6 +30,10 @@ func _physics_process(delta):
 		if "Player" in body.name:
 			num_players += 1
 	
+	if num_players == 0:
+		$Sprites/AnimatedSprite2.animation = "default"
+	if num_players == 1:
+		$Sprites/AnimatedSprite2.animation = "halffull"	
 	if num_players >= 2:
 		$AudioStreamPlayer.play()
 		for body in $Area2D.get_overlapping_bodies():

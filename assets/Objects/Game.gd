@@ -71,17 +71,20 @@ func reload_scene():
 	
 	
 
-func _on_death(win = false):
+func _on_death(win = false, playSound = true, showTransition = true):
 	if not transitioning:
 		if win:
 			levelNum += 1
-			$AudioStreamPlayerWin.play()
+			if playSound:
+				$AudioStreamPlayerWin.play()
 			newLevel = true
 		
 		transitioning = true
 		$EmotionFlyup.visible = false
 		player_vars.exitOpen = false
-		add_child(transition.instance())
+		var transitionInstance = transition.instance()
+		transitionInstance.visible = showTransition
+		add_child(transitionInstance)
 
 
 func _input(event):
@@ -90,7 +93,10 @@ func _input(event):
 			_on_death(true)
 
 func _on_Button_pressed():
-	_on_death(true)
+#	_on_death(true)
+	var tutorial = load("res://assets/Levels/Tutorial.tscn")
+	add_child(tutorial.instance())
+	
 
 
 func _on_ChapterPopupTimer_timeout():

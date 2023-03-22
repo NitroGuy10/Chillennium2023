@@ -12,21 +12,13 @@ script = ExtResource( 1 )
 [node name="TutorialSlide1" parent="." instance=ExtResource( 2 )]
 entering = true
 
-[node name="Label" parent="TutorialSlide1/Sprite" index="0"]
-text = "Use WASD to move
-(click anywhere to continue)"
-
 [node name="TutorialSlide2" parent="." instance=ExtResource( 2 )]
 
 [node name="Sprite" parent="TutorialSlide2" index="0"]
 rotation = 0.109088
 
-[node name="Label" parent="TutorialSlide2/Sprite" index="0"]
-margin_left = -867.214
-margin_top = -202.329
-margin_right = 738.786
-margin_bottom = 0.671021
-text = "Step on colored words to gain an emotion that gives you special abilities"
+[node name="AnimatedSprite" parent="TutorialSlide2/Sprite" index="0"]
+frame = 1
 
 [node name="ExitTimer" parent="TutorialSlide2" index="1"]
 wait_time = 0.1
@@ -36,12 +28,8 @@ wait_time = 0.1
 [node name="Sprite" parent="TutorialSlide3" index="0"]
 rotation = -0.0171227
 
-[node name="Label" parent="TutorialSlide3/Sprite" index="0"]
-margin_left = -855.662
-margin_top = -105.192
-margin_right = 772.338
-margin_bottom = 97.8078
-text = "Fill the heart in the middle and get to the exit to move to the next level"
+[node name="AnimatedSprite" parent="TutorialSlide3/Sprite" index="0"]
+frame = 2
 
 [node name="ExitTimer" parent="TutorialSlide3" index="1"]
 wait_time = 0.05

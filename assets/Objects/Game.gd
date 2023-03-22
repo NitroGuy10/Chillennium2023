@@ -87,10 +87,10 @@ func _on_death(win = false, playSound = true, showTransition = true):
 		add_child(transitionInstance)
 
 
-func _input(event):
-	if titleScreen and event is InputEventKey:
-		if event.pressed:
-			_on_death(true)
+#func _input(event):
+#	if titleScreen and event is InputEventKey:
+#		if event.pressed:
+#			_on_death(true)
 
 func _on_Button_pressed():
 #	_on_death(true)

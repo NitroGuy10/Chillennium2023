@@ -6,6 +6,7 @@ onready var player_vars = get_node("/root/PlayerVariables")
 # var b = "text"
 
 var transitioning = false
+var start_button_pressed = false
 
 var levels = [
 #	preload("res://assets/Levels/Test_Level.tscn"),
@@ -35,8 +36,10 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	if not start_button_pressed:
+		if Input.is_action_just_pressed("ui_accept") || Input.is_action_just_pressed("dash") || Input.is_action_just_pressed("dash_p2") || Input.is_action_just_pressed("ui_up") || Input.is_action_just_pressed("ui_up_p2"):
+			_on_Button_pressed()
 
 func reload_scene():
 	if titleScreen:
@@ -94,9 +97,10 @@ func _on_death(win = false, playSound = true, showTransition = true):
 
 func _on_Button_pressed():
 #	_on_death(true)
-	var tutorial = load("res://assets/Levels/Tutorial.tscn")
-	add_child(tutorial.instance())
-	
+	if not start_button_pressed:
+		start_button_pressed = true
+		$Tutorial._on_Button_pressed()
+		$Tutorial/Timer.start()
 
 
 func _on_ChapterPopupTimer_timeout():
